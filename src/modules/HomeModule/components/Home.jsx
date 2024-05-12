@@ -1,6 +1,7 @@
 import React from 'react'
 import heroImg from "../../../assets/image/hero.png";
-import HeroSection from '../../SharedModule/HeroSection/components/HeroSection';
+import HeroSection from './../../SharedModule/components/HeroSection/components/HeroSection';
+
 
 const Home = () => {
   return (
