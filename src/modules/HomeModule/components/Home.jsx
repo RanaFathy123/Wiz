@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='mt-[5em]'>
       <HeroSection
-          title={"حقق نموك مع نظامنا المتكامل للتسويق "}
+          title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
           btnText={"اشتري الان"}
           image={heroImg}
           descrption={
