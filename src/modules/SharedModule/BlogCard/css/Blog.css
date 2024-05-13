@@ -1,4 +1,4 @@
-.Parent-blogs {
+/* .Parent-blogs {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
 
-}
+} */
 
 .blog {
     width: 100% !important;
@@ -24,7 +24,7 @@
     justify-content: flex-start;
     gap: 15px;
     box-shadow: 0px 12px 16px 0px #00000040;
-    padding: 15px 25px;
+    padding: 15px 30px;
     border-radius: 5px;
     background: #F9F9F9;
     transition: 0.5s;
@@ -73,13 +73,13 @@
 }
 
 @media(width < 768px) {
-    .blogs {
+    /* .blogs {
         width: 100%;
         gap: 10px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    .blogs .blog{
+    } */
+    .blog{
         padding: 5px 10px;
     }
     .blog h1 {
@@ -89,7 +89,7 @@
         text-align: center;
     }
     .blog p {
-        display: none;
+        /* display: none; */
     }
     
 }
