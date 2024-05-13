@@ -221,11 +221,11 @@ const Header = () => {
   }, []);
 
   return (
-<<<<<<< HEAD:src/modules/SharedModule/components/Header/components/Header.jsx
-    <Navbar className="max-w-full px-10 py-2 lg:fixed lg:top-0 auto">
-=======
+
+ 
+
     <Navbar className=" max-w-full px-10 py-2 lg:fixed z-50  top-0">
->>>>>>> 6d067100cca571da4bd48c1d8c4f97b0d834b2ca:src/modules/SharedModule/Header/components/Header.jsx
+
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="div"
