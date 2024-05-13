@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cairo';
+
 }
 
 :root {
@@ -15,13 +17,12 @@ body {
     font-family: 'Cairo';
     overflow-x: hidden;
 }
-
 /* container */
 .container {
     max-width: 1460px !important;
     padding: 100px 30px !important;
     width: 100% !important;
-    margin:  auto ;
+    margin:  auto !important;
     overflow-x: hidden !important;
 }
 
@@ -92,7 +93,7 @@ body {
 .swiper-body .swiper {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 30px 15px;
 }
 
 .swiper-body .swiper-slide {
