@@ -229,7 +229,7 @@ const Header = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="logo" />
         </Typography>
         <div className="hidden lg:block ">
           <NavList />
