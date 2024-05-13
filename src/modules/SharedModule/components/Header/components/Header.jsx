@@ -28,9 +28,9 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import Logo from '../../../../assets/image/Logo.png'
-import sauidiFlag from "../../../../assets/image/twemoji_flag-saudi-arabia.png";
-import americanFlag from "../../../../assets/image/image 26.png";
+import Logo from '../../../../../assets/image/Logo.png'
+import sauidiFlag from "../../../../../assets/image/twemoji_flag-saudi-arabia.png";
+import americanFlag from "../../../../../assets/image/image 26.png";
 
 const navListMenuItems = [
   {
@@ -146,13 +146,13 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block ">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
         </MenuList>
       </Menu>
-      <div className="block lg:hidden">
+      <div className="block lg:hidden auto"  >
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
     </React.Fragment>
@@ -221,7 +221,11 @@ const Header = () => {
   }, []);
 
   return (
+
+ 
+
     <Navbar className=" max-w-full px-10 py-2 lg:fixed z-50  top-0">
+
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="div"
@@ -229,7 +233,7 @@ const Header = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="logo" />
         </Typography>
   {/* ------------- */}
         <div className="over-flow-auto hidden lg:block ">
