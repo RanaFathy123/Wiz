@@ -19,10 +19,11 @@ body {
 }
 /* container */
 .container {
-    max-width: 1460px !important;
-    padding: 100px 30px !important;
+    max-width: 1300px !important;
+    padding: 100px 30px ;
     width: 100% !important;
-    margin:  auto !important;
+    margin-left:  auto !important;
+    margin-right:  auto !important;
     overflow-x: hidden !important;
 }
 
@@ -33,7 +34,7 @@ body {
 }
 @media(width < 450px) {
     .container {
-        padding: 50px 10px !important;
+        padding: 50px 20px !important;
     }
 }
 
@@ -144,4 +145,18 @@ body {
     to {
       transform: rotate(360deg);
     }
+  }
+  /* show all button */
+  .showAll{
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: linear-gradient(180deg, #121F4E 0%, #0D3780 100%);
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  .showAll:hover{
+    background: linear-gradient(180deg, #0D3780 100%,#121F4E 0%);
+    scale: 1.1;
+    border-radius: 10px;
   }

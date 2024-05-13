@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
       <div className="foot">
       </div>
-      <p className='bg-[#fff] text-[#000] text-center py-2.5'>حقوق النشر محفوظة</p>
+      <p className='bg-[#fff] text-[#000] text-center py-2'>حقوق النشر محفوظة</p>
     </footer>
   )
 }

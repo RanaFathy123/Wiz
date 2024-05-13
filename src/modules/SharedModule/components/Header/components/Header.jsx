@@ -31,6 +31,7 @@ import {
 import Logo from '../../../../../assets/image/Logo.png'
 import sauidiFlag from "../../../../../assets/image/twemoji_flag-saudi-arabia.png";
 import americanFlag from "../../../../../assets/image/image 26.png";
+import { Link } from "react-router-dom";
 
 const navListMenuItems = [
   {
@@ -133,15 +134,13 @@ function NavListMenu() {
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden overflow-auto    w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`hidden overflow-auto    w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </ListItem>
           </Typography>
@@ -168,9 +167,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
+        <Link to={'/'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 text-xl ">
           الرئيسية
         </ListItem>
+        </Link>
       </Typography>
       <Typography
         as="a"
@@ -202,9 +203,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
+        <Link to={'/blogs'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-xl">
           مدونات
         </ListItem>
+        </Link>
       </Typography>
     </List>
   );
@@ -222,7 +225,7 @@ const Header = () => {
 
   return (
 
- 
+
 
     <Navbar className=" max-w-full px-10 py-2 lg:fixed z-50  top-0">
 
@@ -233,15 +236,17 @@ const Header = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-        <img src={Logo} alt="logo" />
+          <Link to={'/'}>
+            <img src={Logo} alt="logo" />
+          </Link>
         </Typography>
-  {/* ------------- */}
+        {/* ------------- */}
         <div className="over-flow-auto hidden lg:block ">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex items-center  ">
-          <img src={sauidiFlag} alt="sauidi flag"  />
-          <img src={americanFlag} alt=" american flag"  />
+          <img src={sauidiFlag} alt="sauidi flag" />
+          <img src={americanFlag} alt=" american flag" />
           <Button variant="gradient" size="sm" color="blue">
             تواصل معانا
           </Button>
@@ -262,7 +267,7 @@ const Header = () => {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <img src={sauidiFlag} alt="sauidi flag"   />
+          <img src={sauidiFlag} alt="sauidi flag" />
           <img src={americanFlag} alt=" american flag" />
           <Button variant="gradient" size="sm" color="blue">
             تواصل معانا

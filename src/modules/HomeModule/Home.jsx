@@ -18,16 +18,19 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-
-
+// import maquee
 import ServicesCard from '../SharedModule/ServicesCard/ServicesCard';
 import Features from '../SharedModule/Features/Features';
 import Blog from '../SharedModule/BlogCard/Blog';
+import { Link } from "react-router-dom";
+import Bannar from "../SharedModule/Bannar/Bannar";
 
 const Home = () => {
+
+
   return (
-    <div className=''>
-      <HeroSection
+    <div className="">
+     <HeroSection
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
         btnText={"اشتري الان"}
         image={heroImg}
@@ -111,67 +114,25 @@ const Home = () => {
                 "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
               }
             />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
           </div>
+          <Link to='/services' className="showAll">عرض المزيد</Link>
         </div>
       </div>
       <div className="swiper-body container">
-       <div className="head">
-        <h1>أحدث المقالات </h1>
-        <p>استمتع بقراءة افضل و احدث المقالات حول التحول الرقمي و تاثيره في سوق العمل و زيادة الارباح و قصص و نجلح الشركات </p>
-       </div>
+        <div className="head">
+          <h1>أحدث المقالات </h1>
+          <p>استمتع بقراءة افضل و احدث المقالات حول التحول الرقمي و تاثيره في سوق العمل و زيادة الارباح و قصص و نجلح الشركات </p>
+        </div>
         <Swiper
-      // slidesPerView={3}
-        breakpoints={{
-          600: {
-            slidesPerView: 2,
-          },
-          
-          960: {
-            slidesPerView: 3,
-          },
-        }}
+          // slidesPerView={3}
+          breakpoints={{
+            600: {
+              slidesPerView: 2,
+            },
+            960: {
+              slidesPerView: 3,
+            },
+          }}
           // slidesPerView={3}
           spaceBetween={50}
           pagination={{
@@ -192,10 +153,62 @@ const Home = () => {
         </Swiper>
       </div>
 
+      <Bannar />
 
+      {/* test  */}
+
+     <div className="slider container">
+      <div className="slider-track">
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+
+        {/* daaaaaaa */}
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+        <div className="slid">
+          <img src={heroImg} alt="" />
+        </div>
+      </div>
+     </div>
 
 
     </div>
+
   );
 };
 
