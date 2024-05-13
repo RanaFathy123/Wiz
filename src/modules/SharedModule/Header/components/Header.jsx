@@ -133,7 +133,7 @@ function NavListMenu() {
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
+                className={`hidden overflow-auto    w-3 transition-transform lg:block ${
                   isMenuOpen ? "rotate-180" : ""
                 }`}
               />
@@ -221,7 +221,7 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar className="max-w-full px-10 py-2 fixed top-0">
+    <Navbar className=" max-w-full px-10 py-2 lg:fixed z-50  top-0">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="div"
@@ -231,7 +231,8 @@ const Header = () => {
         >
         <img src={Logo} alt="" />
         </Typography>
-        <div className="hidden lg:block ">
+  {/* ------------- */}
+        <div className="over-flow-auto hidden lg:block ">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex items-center  ">
