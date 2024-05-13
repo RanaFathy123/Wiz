@@ -9,9 +9,9 @@ const Footer = () => {
           <img src={logo} alt="" />
           <p>استراتيجيتنا تعتمد على التطوير المستمر لتحقيق الأهداف دون تعقيدات أو إضاعة وقت في التخطيط الزائد</p>
           <div className="links">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-brands fa-square-facebook"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-solid fa-envelope"></i>
           </div>
         </div>
         <div className='service'>
