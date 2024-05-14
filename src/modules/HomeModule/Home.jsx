@@ -5,28 +5,36 @@ import serviceImg from "../../assets/GIf/2.gif";
 import HeroSection from "./../SharedModule/components/HeroSection/components/HeroSection";
 import vedioImage from "../../assets/image/Group 427320995.png";
 import "./css/home.css";
-import CompaniesCard from "../SharedModule/CompaniesCard/CompaniesCard";
+// import CompaniesCard from "../SharedModule/CompaniesCard/CompaniesCard";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 // import useM
 // Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 
 
 // import required modules
-import { Pagination } from "swiper/modules";
 // import maquee
 import ServicesCard from "../SharedModule/ServicesCard/ServicesCard";
 import Features from "../SharedModule/Features/Features";
 import Blog from "../SharedModule/BlogCard/Blog";
 import { Link } from "react-router-dom";
 import Bannar from "../SharedModule/Bannar/Bannar";
-
+import Success from "../Success/Success";
+// import image success
+import saudi from '../../assets/image/twemoji_flag-saudi-arabia.png'
+import salla from '../../assets/image/salla.png'
+import secc from '../../assets/image/seccess.png'
+import wiz from '../../assets/image/Logo.png'
 const Home = () => {
   return (
-    <div className="">
+    <div >
       <HeroSection
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
         btnText={"اشتري الان"}
@@ -187,16 +195,62 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      
-          {/* companies logos section*/}
-          <CompaniesCard/> 
-          {/* End Companies logos section */}
+
+      {/* companies logos section*/}
+      {/* <CompaniesCard/>  */}
+      {/* End Companies logos section */}
+      {/* success */}
+
+      <div className="swiper-body container ">
+        <div className="head">
+          <h1>قصص النجاح</h1>
+        </div>
+        <Swiper
+          spaceBetween={30}
+          effect={'fade'}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <Success
+              CampName={'Company Name'}
+              CampDesc={'Diamond Motors has received the highest ratings and various awards in the sales and service categories available.'}
+              CampImg={secc}
+              type={'حملة اعلانيه'}
+              country={'السعودية'}
+              countryImg={saudi}
+              platformImg={salla}
+              platform={'salla'}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Success
+              CampName={'ميتسوبيشي'}
+              CampDesc={'حققت شركة دايموند موتورز أعلى التصنيفات والجوائز المختلفة في مجالات المبيعات والخدمات والتسويق .'}
+              CampImg={secc}
+              type={'حملة اعلانيه'}
+              country={'السعودية'}
+              countryImg={saudi}
+              platformImg={salla}
+              platform={'salla'}
+            />
+          </SwiperSlide>
+        </Swiper>
+
+      </div>
+
+
       <Bannar />
 
       {/* test  */}
 
-      
-    </div>
+
+    </div >
   );
 };
 

@@ -31,7 +31,6 @@ const CompaniesCard = () => {
 
       
         {isMinWidth ? (
-      
           <img src={our_customers} alt="Our Customers" />
        ): (
 
