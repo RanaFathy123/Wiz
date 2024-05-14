@@ -5,7 +5,7 @@ import serviceImg from "../../assets/GIf/2.gif";
 import HeroSection from "./../SharedModule/components/HeroSection/components/HeroSection";
 import vedioImage from "../../assets/image/Group 427320995.png";
 import "./css/home.css";
-import CompaniesCard from "../SharedModule/CompaniesCard/CompaniesCard";
+import CompaniesCard from "./components/CompaniesCard/CompaniesCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,10 +24,15 @@ import Features from "../SharedModule/Features/Features";
 import Blog from "../SharedModule/BlogCard/Blog";
 import { Link } from "react-router-dom";
 import Bannar from "../SharedModule/Bannar/Bannar";
+import TechContainer from "./components/TechContainer/TechContainer";
 
 const Home = () => {
   return (
     <div className="">
+
+        
+    
+
       <HeroSection
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
         btnText={"اشتري الان"}
@@ -68,6 +73,10 @@ const Home = () => {
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
         }
       />
+        {/* Start  Technologies section */}
+        <TechContainer/>
+      {/* End  Technologies section */}
+
       {/* services */}
       <div className="bg">
         <div className="services container">
@@ -124,6 +133,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
+    
+
       <div className="swiper-body container">
         <div className="head">
           <h1>أحدث المقالات </h1>
@@ -192,6 +203,8 @@ const Home = () => {
           {/* companies logos section*/}
           <CompaniesCard/> 
           {/* End Companies logos section */}
+
+
       <Bannar />
 
       {/* test  */}
