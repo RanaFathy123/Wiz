@@ -1,0 +1,149 @@
+/* 
+  .serv {
+    background: #F9F9F9F9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+  .serv:hover{
+    background: var(--main-color);
+    scale: 1.02;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+  .serv:hover :where(a,h1,p){
+    color: #fff !important;
+    border-color: #fff;
+}
+  .serv:hover img{
+    transition: 0.3s;
+    transform: translateX(30px);
+    scale: 2.5;
+
+}
+  .serv .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+  .serv img {
+    transition: 1s;
+    width: 160px;
+    margin-right: auto;
+}
+
+  .serv h1 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 44.98px;
+    color: var(--main-color);
+}
+
+  .serv p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 29.98px;
+    color: var(--sec-color);
+
+}
+  .serv a{
+    margin: auto;
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: var(--sec-color);
+    border: 1px solid #00000080;
+    padding: 5px 20px;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: 0.3s;
+} */
+/* ------------------------------- */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.bg{
+    background: #F9F9F9;
+
+}
+
+
+
+.services .servs {
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.services .servs .serv {
+    background: #F9F9F9F9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.services .servs .serv:hover{
+    background: var(--main-color);
+    scale: 1.02;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.services .servs .serv:hover :where(a,h1,p){
+    color: #fff !important;
+    border-color: #fff;
+}
+.services .servs .serv:hover img{
+    transition: 0.3s;
+    transform: translateX(30px);
+    scale: 2.5;
+
+}
+.services .servs .serv .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.services .servs .serv img {
+    transition: 1s;
+    width: 160px;
+    scale: 1.4;
+    margin-right: auto;
+}
+
+.services .servs .serv h1 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 44.98px;
+    color: var(--main-color);
+}
+
+.services .servs .serv p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 29.98px;
+    color: var(--sec-color);
+
+}
+.services .servs .serv a{
+    margin: auto;
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: var(--sec-color);
+    border: 1px solid #00000080;
+    padding: 5px 20px;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
