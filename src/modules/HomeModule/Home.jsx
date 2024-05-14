@@ -206,9 +206,13 @@ const Home = () => {
           <h1>قصص النجاح</h1>
         </div>
         <Swiper
+
+
+          navigation={1==2 ? false : true}
+
           spaceBetween={30}
           effect={'fade'}
-          navigation={true}
+
           pagination={{
             clickable: true,
           }}
