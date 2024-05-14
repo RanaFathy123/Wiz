@@ -28,10 +28,9 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import Logo from '../../../../../assets/image/Logo.png'
+import Logo from "../../../../../assets/image/Logo.png";
 import sauidiFlag from "../../../../../assets/image/twemoji_flag-saudi-arabia.png";
 import americanFlag from "../../../../../assets/image/image 26.png";
-import { Link } from "react-router-dom";
 
 const navListMenuItems = [
   {
@@ -134,13 +133,15 @@ function NavListMenu() {
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden overflow-auto    w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`hidden overflow-auto    w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
               />
             </ListItem>
           </Typography>
@@ -151,7 +152,7 @@ function NavListMenu() {
           </ul>
         </MenuList>
       </Menu>
-      <div className="block lg:hidden auto"  >
+      <div className="block lg:hidden auto">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
     </React.Fragment>
@@ -167,11 +168,9 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'/'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 text-xl ">
           الرئيسية
         </ListItem>
-        </Link>
       </Typography>
       <Typography
         as="a"
@@ -203,11 +202,9 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'/blogs'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-xl">
           مدونات
         </ListItem>
-        </Link>
       </Typography>
     </List>
   );
@@ -224,32 +221,26 @@ const Header = () => {
   }, []);
 
   return (
-
-
-
-    <Navbar className=" max-w-full px-10 py-2 lg:fixed z-50  top-0">
-
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className="max-w-full  lg:fixed z-50   top-0 ">
+      <div className="flex items-center container mx-auto !px-0 !py-0 justify-between text-blue-gray-900 ">
         <Typography
           as="div"
           href="#"
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-          <Link to={'/'}>
-            <img src={Logo} alt="logo" />
-          </Link>
+          <img src={Logo} alt="logo" />
         </Typography>
         {/* ------------- */}
         <div className="over-flow-auto hidden lg:block ">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex items-center  ">
-          <img src={sauidiFlag} alt="sauidi flag" />
-          <img src={americanFlag} alt=" american flag" />
-          <Button variant="gradient" size="sm" color="blue">
+          <img src={sauidiFlag} alt="sauidi flag"className="w-[3em]"/>
+          <img src={americanFlag} alt=" american flag" className="w-[3em]"/>
+          <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
-          </Button>
+          </button>
         </div>
         <IconButton
           variant="text"
@@ -267,11 +258,11 @@ const Header = () => {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <img src={sauidiFlag} alt="sauidi flag" />
-          <img src={americanFlag} alt=" american flag" />
-          <Button variant="gradient" size="sm" color="blue">
+        <img src={sauidiFlag} alt="sauidi flag"className="w-[3em]"/>
+          <img src={americanFlag} alt=" american flag" className="w-[3em]"/>
+          <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
-          </Button>
+          </button>
         </div>
       </Collapse>
     </Navbar>
