@@ -221,8 +221,8 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar className=" max-w-full  lg:fixed z-50  top-0 h-25">
-      <div className="flex items-center container mx-auto !py-0 justify-between text-blue-gray-900 ">
+    <Navbar className="max-w-full  lg:fixed z-50   top-0 ">
+      <div className="flex items-center container mx-auto !px-0 !py-0 justify-between text-blue-gray-900 ">
         <Typography
           as="div"
           href="#"
