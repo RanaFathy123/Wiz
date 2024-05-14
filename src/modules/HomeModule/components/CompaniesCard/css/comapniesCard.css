@@ -6,7 +6,7 @@
     width: 90%;
     display: grid;
     place-items: center;
-    background-image: url('../../../../assets/image/rectangle.png');
+    background-image: url('../../../../../assets/image/rectangle.png');
 }
 .slider-track{
     display: flex;

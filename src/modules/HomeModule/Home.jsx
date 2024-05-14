@@ -26,6 +26,8 @@ import Features from "../SharedModule/Features/Features";
 import Blog from "../SharedModule/BlogCard/Blog";
 import { Link } from "react-router-dom";
 import Bannar from "../SharedModule/Bannar/Bannar";
+import TechContainer from "./components/TechContainer/TechContainer";
+
 import Success from "../Success/Success";
 // import image success
 import saudi from '../../assets/image/twemoji_flag-saudi-arabia.png'
@@ -75,6 +77,10 @@ const Home = () => {
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
         }
       />
+        {/* Start  Technologies section */}
+        <TechContainer/>
+      {/* End  Technologies section */}
+
       {/* services */}
       <div className="bg">
         <div className="services container">
@@ -131,6 +137,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
+    
+
       <div className="swiper-body container">
         <div className="head">
           <h1>أحدث المقالات </h1>

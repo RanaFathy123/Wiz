@@ -1,17 +1,17 @@
-import eden from "../../../assets/image/companies_logos/eden.png"
-import asu from "../../../assets/image/companies_logos/asu.png"
-import elgoof from "../../../assets/image/companies_logos/elgoof.png"
-import elshar2a from "../../../assets/image/companies_logos/elshar2a.png"
-import zayed_award from "../../../assets/image/companies_logos/zayed_award.png"
-import lambreez from "../../../assets/image/companies_logos/lambreez.png"
-import larooz from "../../../assets/image/companies_logos/larooz.png"
-import mitsubishi from "../../../assets/image/companies_logos/mitsubishi.png"
-import silko from "../../../assets/image/companies_logos/silko.png"
-import twagd from "../../../assets/image/companies_logos/twagd.png"
-import oomla2 from "../../../assets/image/3omla2.png"
+import eden from "../../../../assets/image/companies_logos/eden.png"
+import asu from "../../../../assets/image/companies_logos/asu.png"
+import elgoof from "../../../../assets/image/companies_logos/elgoof.png"
+import elshar2a from "../../../../assets/image/companies_logos/elshar2a.png"
+import zayed_award from "../../../../assets/image/companies_logos/zayed_award.png"
+import lambreez from "../../../../assets/image/companies_logos/lambreez.png"
+import larooz from "../../../../assets/image/companies_logos/larooz.png"
+import mitsubishi from "../../../../assets/image/companies_logos/mitsubishi.png"
+import silko from "../../../../assets/image/companies_logos/silko.png"
+import twagd from "../../../../assets/image/companies_logos/twagd.png"
+import oomla2 from "../../../../assets/image/3omla2.png"
  
 import { useEffect, useState } from "react";
-import our_customers from "../../../assets/image/our_customers.png"
+import our_customers from "../../../../assets/image/our_customers.png"
 import "./css/comapniesCard.css";
 
 const CompaniesCard = () => {
