@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import HeroSection from '../../SharedModule/components/HeroSection/components/HeroSection'
 import ImgHero from '../../../assets/image/hero.png'
 import ServicesCard from '../../SharedModule/ServicesCard/ServicesCard'
