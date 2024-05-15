@@ -149,11 +149,11 @@ function NavListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-full w-full px-3 rounded-xl lg:block ">
-          <div className="text-3xl font-bold m-3 text-black">برامج الويب</div>
+          <div className="text-3xl font-bold m-3 text-black outline-none outline-0">برامج الويب</div>
           <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
-          <div className="text-3xl font-bold m-3 text-black">برامج الويب</div>
+          <div className="text-3xl font-bold m-3 text-black outline-none outline-0">برامج الويب</div>
           <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
@@ -161,9 +161,9 @@ function NavListMenu() {
       </Menu>
       <div className="block lg:hidden auto">
         <Collapse open={isMobileMenuOpen}>
-        <div className="text-3xl font-bold m-3 text-black">برامج الويب</div>
+        <div className="text-3xl font-bold m-3 text-black outline-none outline-0">برامج الويب</div>
           {renderItems}
-          <div className="text-3xl font-bold m-3 text-black">برامج الويب</div>
+          <div className="text-3xl font-bold m-3 text-black outline-none outline-0">برامج الويب</div>
           {renderItems}
           </Collapse>
       </div>
