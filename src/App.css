@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo';
-
 }
 
 :root {
@@ -34,7 +33,7 @@ body {
 }
 @media(width < 450px) {
     .container {
-        padding: 50px 20px !important;
+        padding: 50px 11px !important;
     }
 }
 
@@ -73,6 +72,11 @@ body {
         line-height: 30.98px;
 
     }
+    div h2{
+      font-size: 32px;
+      line-height: 40.98px;
+    }
+    
 }
 
 /* swiper */
@@ -160,3 +164,5 @@ body {
     scale: 1.1;
     border-radius: 10px;
   }
+
+  

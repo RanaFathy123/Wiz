@@ -1,4 +1,3 @@
-import React from 'react'
 import './css/servicesCard.css'
 export default function ServicesCard({image,title,desc}) {
   return (
