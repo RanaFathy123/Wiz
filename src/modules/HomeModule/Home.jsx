@@ -5,7 +5,7 @@ import serviceImg from "../../assets/GIf/2.gif";
 import HeroSection from "./../SharedModule/components/HeroSection/components/HeroSection";
 import vedioImage from "../../assets/image/Group 427320995.png";
 import "./css/home.css";
-// import CompaniesCard from "../SharedModule/CompaniesCard/CompaniesCard";
+import CompaniesCard from "./components/CompaniesCard/CompaniesCard";
 
 // Import Swiper React components
 // import useM
@@ -205,7 +205,7 @@ const Home = () => {
       </div>
 
       {/* companies logos section*/}
-      {/* <CompaniesCard/>  */}
+      <CompaniesCard/> 
       {/* End Companies logos section */}
       {/* success */}
 
