@@ -155,14 +155,26 @@ footer .pages a {
     footer .service {
         gap: 0px;
     }
-
+    footer .contact{
+        gap: 20px;
+    }
+    footer .links >i{
+        font-size: 25px !important;
+    }
+    footer .title{
+        line-height: 30px;
+        font-size: 22px;
+    }
     footer form {
         width: 95%;
     }
 
     footer .right p {
-        padding: 0px 5px;
-        font-size: 16px;
+        padding: 0px 8px;
+        font-size: 15px;
+    }
+    footer .right img{
+        width: 75px;
     }
 
     footer .service .services {
@@ -176,15 +188,22 @@ footer .pages a {
     }
 
     footer form button {
-        width: 23%;
+        width: 60px;
+        height: 39px;
+        border-width: 1px;
     }
-
+    footer form button i{
+        font-size: 20px;
+    }
     footer form input {
         width: 75%;
+        height: 40px;
+        border-width: 1px;
     }
 
     footer p {
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
+        padding: 0px 8px;
     }
 }

@@ -2,36 +2,36 @@ import "./TechContainer.css";
 import design from "../../../../assets/image/design.png"
 import frontEnd from "../../../../assets/image/frontEnd.png"
 import backend from "../../../../assets/image/backend.png"
-import mobile from "../../../../assets/image/mobile.png"
+import Tech_1 from "../../../../assets/GIf/Tech_1.gif"
 
 const TechContainer = () => {
   return (
-    <div>
-      <h2>الادوات و التقنيات</h2>
-      <p id="techParagraph">
-        افضل الادوات و التقينات التي يستخدمها فريق العمل الخاص بنا
-      </p>
-      <div className="grid grid-col-12  gap-y-2 sm:grid-flow-col ">
-        <div className="grid grid-cols-1 gap-y-14">
-          <div>
+    // id="techParagraph"
+    <div className="container">
+      <div className="head">
+        <h1>الادوات و التقنيات</h1>
+        <p >
+          افضل الادوات و التقينات التي يستخدمها فريق العمل الخاص بنا
+        </p>
+      </div>
+      <div 
+      className=" grid-cols-1 items-start md:grid-cols-2 gap-4 grid md:mt-14">
+          <div className="m-auto techItem w-full">
             <h4 id="techTitle">التصميم</h4>
-            <img id="techImage" src={design} alt="" />
+            <img className="md:max-w-[450px] max-w-[250px]" src={Tech_1} alt="" />
           </div>
-          <div >
-          <h4 id="techTitle">باك اند</h4>
-            <img id="techImage" src={backend} alt="" />
+          <div className="m-auto techItem w-full">
+            <h4 id="techTitle">التصميم</h4>
+            <img  className="md:max-w-[450px] max-w-[250px]" src={Tech_1} alt="" />
           </div>
-        </div>
-        <div className="grid grid-cols-1 gap-y-14 mt-12">
-          <div>
-          <h4 id="techTitle">فرونت اند</h4>
-            <img id="techImage" src={frontEnd} alt="" />
+          <div className="m-auto techItem w-full">
+            <h4 id="techTitle">التصميم</h4>
+            <img className="md:max-w-[450px] max-w-[250px]" src={Tech_1} alt="" />
           </div>
-          <div>
-          <h4 id="techTitle">برمجة التطبيقات</h4>
-            <img id="techImage" src={mobile} alt="" />
+          <div className="m-auto techItem w-full">
+            <h4 id="techTitle">التصميم</h4>
+            <img className="md:max-w-[450px] max-w-[250px]" src={Tech_1} alt="" />
           </div>
-        </div>
       </div>
     </div>
   );

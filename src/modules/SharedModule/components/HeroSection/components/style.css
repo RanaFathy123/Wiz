@@ -17,6 +17,10 @@
     flex-direction: column;
     gap: 20px;
 }
+.heroSection img{
+    width: 50%;
+    min-width: 500px;
+}
 .heroSection .title {
     color: #0c3c8b;
     font-size: 50px;

@@ -9,7 +9,7 @@ import mitsubishi from "../../../../assets/image/companies_logos/mitsubishi.png"
 import silko from "../../../../assets/image/companies_logos/silko.png"
 import twagd from "../../../../assets/image/companies_logos/twagd.png"
 import oomla2 from "../../../../assets/image/3omla2.png"
- 
+
 import { useEffect, useState } from "react";
 import our_customers from "../../../../assets/image/our_customers.png"
 import "./css/comapniesCard.css";
@@ -29,54 +29,125 @@ const CompaniesCard = () => {
   return (
     <div className="companies-card-containner">
 
-      
-        {isMinWidth ? (
-          <img src={our_customers} alt="Our Customers" />
-       ): (
 
-        <div className="slider container">
-          
-         <div style={{ marginLeft:'80%' ,marginBottom:'20px' , alignItems:'center'} }>
-          <img src={oomla2}  alt="" />
-         </div>
-        <div className="slider-track">
+      {isMinWidth ? (
+        <img src={our_customers} alt="Our Customers" />
+      ) : (
+        <>
+          <div className="slider container "
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '15px'
+            }}
+          >
+            <div >
+              <img src={oomla2} alt="" />
+            </div>
+            <div className="slider-track">
+              <div className="slid">
+                <img src={eden} alt="" />
+              </div>
+              <div className="slid">
+                <img src={asu} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elgoof} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elshar2a} alt="" />
+              </div>
+              <div className="slid">
+                <img src={zayed_award} alt="" />
+              </div>
+              <div className="slid">
+                <img src={lambreez} alt="" />
+              </div>
+              <div className="slid">
+                <img src={larooz} alt="" />
+              </div>
 
-          <div className="slid">
-            <img src={eden} alt="" />
+              <div className="slid">
+                <img src={mitsubishi} alt="" />
+              </div>
+              <div className="slid">
+                <img src={silko} alt="" />
+              </div>
+              <div className="slid">
+                <img src={twagd} alt="" />
+              </div>
+              {/* tow  */}
+              <div className="slid">
+                <img src={eden} alt="" />
+              </div>
+              <div className="slid">
+                <img src={asu} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elgoof} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elshar2a} alt="" />
+              </div>
+              <div className="slid">
+                <img src={zayed_award} alt="" />
+              </div>
+              <div className="slid">
+                <img src={lambreez} alt="" />
+              </div>
+              <div className="slid">
+                <img src={larooz} alt="" />
+              </div>
+
+              <div className="slid">
+                <img src={mitsubishi} alt="" />
+              </div>
+              <div className="slid">
+                <img src={silko} alt="" />
+              </div>
+              <div className="slid">
+                <img src={twagd} alt="" />
+              </div>
+                 {/* tow  */}
+                 <div className="slid">
+                <img src={eden} alt="" />
+              </div>
+              <div className="slid">
+                <img src={asu} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elgoof} alt="" />
+              </div>
+              <div className="slid">
+                <img src={elshar2a} alt="" />
+              </div>
+              <div className="slid">
+                <img src={zayed_award} alt="" />
+              </div>
+              <div className="slid">
+                <img src={lambreez} alt="" />
+              </div>
+              <div className="slid">
+                <img src={larooz} alt="" />
+              </div>
+
+              <div className="slid">
+                <img src={mitsubishi} alt="" />
+              </div>
+              <div className="slid">
+                <img src={silko} alt="" />
+              </div>
+              <div className="slid">
+                <img src={twagd} alt="" />
+              </div>
+            </div>
           </div>
-          <div className="slid">
-            <img src={asu} alt="" />
-          </div>
-          <div className="slid">
-            <img src={elgoof} alt="" />
-          </div>
-          <div className="slid">
-            <img src={elshar2a} alt="" />
-          </div>
-          <div className="slid">
-            <img src={zayed_award} alt="" />
-          </div>
-          <div className="slid">
-            <img src={lambreez} alt="" />
-          </div>
-          <div className="slid">
-            <img src={larooz} alt="" />
-          </div>
- 
-          <div className="slid">
-            <img src={mitsubishi} alt="" />
-          </div>
-          <div className="slid">
-            <img src={silko} alt="" />
-          </div>
-          <div className="slid">
-            <img src={twagd} alt="" />
-          </div>
-        </div>
-      </div>
+        </>
       )}
-      
-      
+
+
     </div>
   );
 };

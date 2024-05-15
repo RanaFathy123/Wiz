@@ -30,6 +30,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../../../assets/image/Logo.png";
 import { TbWorld } from "react-icons/tb";
+// import { TbWorld } from "react-icons/tb";
 
 const navListMenuItems = [
   {
@@ -259,7 +260,7 @@ const Header = () => {
           </span>
           <TbWorld
             onClick={handleChangeLanguage}
-            className="text-4xl text-[#121F4E]"
+            className="text-3xl ml-3 text-[#121F4E]"
           />
           <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
@@ -270,7 +271,7 @@ const Header = () => {
           onClick={handleChangeLanguage}
         >
           <span>{changeLanguage ? "English" : "عربى"}</span>
-          <TbWorld className="text-4xl  text-[#121F4E]" />
+          <TbWorld className="text-2xl  text-[#121F4E]" />
         </div>
 
         <IconButton

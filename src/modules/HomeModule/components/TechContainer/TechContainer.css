@@ -1,82 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
-
-div h2 {
-    width: 380px;
-    height: 90px;
-    font-family: 'Cairo';
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 89.95px;
-    text-align: center;
-    color: #0C3C8B;
-}
-
-#techParagraph {
-    width: 650px;
-    height: 45px;
-    font-family: 'Cairo';
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 44.98px;
-    text-align: center;
-    color: #000000B2;
-
-}
-
-.box {
-    background-color: aqua;
-    width: 100px;
-    height: 100px;
-}
-
-@media (max-width: 500px) {
-    #techParagraph {
-        width: 100%;
-        font-size: 17px;
-        line-height: 30.98px;
-        text-align: right;
-        word-wrap: break-word;
-        /* Ensures long words break to fit the container */
-        overflow-wrap: break-word;
-        /* Ensures long words break to fit the container */
-        white-space: normal;
-        /* Allows text to wrap naturally */
-        margin-bottom: 40px;
-    }
-
-    #techTitle {
-            width: 75px;
-            height: 37px;
-        left: 197px;
-        gap: 0px;
-        opacity: 0px;
-
-        font-family: 'Cairo';
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 37.48px;
-        text-align: center;
-    }
-    #techImage{
-        
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-}
-
 #techTitle {
-    width: 120px;
-    height: 60px;
-    opacity: 0px;
+    margin-bottom: 20px;
     font-family: 'Cairo';
     font-size: 28px;
     font-weight: 700;
-    line-height: 24.97px;
-    text-align: center;
-
 }
+.techItem{
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media(width < 500px){
 
-#techImage {
-    width: 504px;
-    height: 64px;
+    #techTitle{
+        font-size: 21px;
+    }
 }

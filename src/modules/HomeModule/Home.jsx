@@ -33,14 +33,14 @@ import Success from "../Success/Success";
 import saudi from '../../assets/image/twemoji_flag-saudi-arabia.png'
 import salla from '../../assets/image/salla.png'
 import secc from '../../assets/image/seccess.png'
-import wiz from '../../assets/image/Logo.png'
+import wiz from '../../assets/GIf/hero_1.gif'
 const Home = () => {
   return (
     <div >
       <HeroSection
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
         btnText={"اشتري الان"}
-        image={heroImg}
+        image={wiz}
         descrption={
           "أكثر من مجرد اعلانات تشمل خدماتنا كل شي لضمان نجاح مشروعك من الصفر"
         }
@@ -77,9 +77,7 @@ const Home = () => {
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
         }
       />
-        {/* Start  Technologies section */}
-        <TechContainer/>
-      {/* End  Technologies section */}
+
 
       {/* services */}
       <div className="bg">
@@ -137,7 +135,57 @@ const Home = () => {
           </Link>
         </div>
       </div>
-    
+            {/* success */}
+            <div className="swiper-body container ">
+        <div className="head">
+          <h1>قصص النجاح</h1>
+        </div>
+        <Swiper
+
+
+          navigation={1 == 2 ? false : true}
+
+          spaceBetween={30}
+          effect={'fade'}
+
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <Success
+              CampName={'Company Name'}
+              CampDesc={'Diamond Motors has received the highest ratings and various awards in the sales and service categories available.'}
+              CampImg={secc}
+              type={'حملة اعلانيه'}
+              country={'السعودية'}
+              countryImg={saudi}
+              platformImg={salla}
+              platform={'salla'}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Success
+              CampName={'ميتسوبيشي'}
+              CampDesc={'حققت شركة دايموند موتورز أعلى التصنيفات والجوائز المختلفة في مجالات المبيعات والخدمات والتسويق .'}
+              CampImg={secc}
+              type={'حملة اعلانيه'}
+              country={'السعودية'}
+              countryImg={saudi}
+              platformImg={salla}
+              platform={'salla'}
+            />
+          </SwiperSlide>
+        </Swiper>
+
+      </div>
+      
+      {/* Start  Technologies section */}
+      <TechContainer />
+      {/* End  Technologies section */}
 
       <div className="swiper-body container">
         <div className="head">
@@ -205,56 +253,9 @@ const Home = () => {
       </div>
 
       {/* companies logos section*/}
-      <CompaniesCard/> 
+      <CompaniesCard />
       {/* End Companies logos section */}
-      {/* success */}
 
-      <div className="swiper-body container ">
-        <div className="head">
-          <h1>قصص النجاح</h1>
-        </div>
-        <Swiper
-
-
-          navigation={1==2 ? false : true}
-
-          spaceBetween={30}
-          effect={'fade'}
-
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Success
-              CampName={'Company Name'}
-              CampDesc={'Diamond Motors has received the highest ratings and various awards in the sales and service categories available.'}
-              CampImg={secc}
-              type={'حملة اعلانيه'}
-              country={'السعودية'}
-              countryImg={saudi}
-              platformImg={salla}
-              platform={'salla'}
-
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Success
-              CampName={'ميتسوبيشي'}
-              CampDesc={'حققت شركة دايموند موتورز أعلى التصنيفات والجوائز المختلفة في مجالات المبيعات والخدمات والتسويق .'}
-              CampImg={secc}
-              type={'حملة اعلانيه'}
-              country={'السعودية'}
-              countryImg={saudi}
-              platformImg={salla}
-              platform={'salla'}
-            />
-          </SwiperSlide>
-        </Swiper>
-
-      </div>
 
 
       <Bannar />
