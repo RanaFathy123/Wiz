@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from "react";
 import {
-  Navbar,
-  Collapse,
-  Typography,
-  Button,
-  IconButton,
-  List,
-  ListItem,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-} from "@material-tailwind/react";
-import {
-  ChevronDownIcon,
   Bars3Icon,
+  ChevronDownIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -28,54 +14,78 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+import {
+  Collapse,
+  IconButton,
+  List,
+  ListItem,
+  Menu,
+  MenuHandler,
+  MenuItem,
+  MenuList,
+  Navbar,
+  Typography,
+} from "@material-tailwind/react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../../../../assets/image/Logo.png";
-import sauidiFlag from "../../../../../assets/image/twemoji_flag-saudi-arabia.png";
-import americanFlag from "../../../../../assets/image/image 26.png";
+import { TbWorld } from "react-icons/tb";
 
 const navListMenuItems = [
   {
     title: "Products",
-    description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
   },
   {
     title: "About Us",
-    description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
   },
   {
     title: "Blog",
-    description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
   },
   {
     title: "Services",
-    description: "Learn how we can help you achieve your goals.",
+
     icon: SunIcon,
   },
   {
     title: "Support",
-    description: "Reach out to us for assistance or inquiries",
+
     icon: GlobeAmericasIcon,
   },
   {
     title: "Contact",
-    description: "Find the perfect solution for your needs.",
+
     icon: PhoneIcon,
   },
   {
     title: "News",
-    description: "Read insightful articles, tips, and expert opinions.",
+
     icon: NewspaperIcon,
   },
   {
     title: "Products",
-    description: "Find the perfect solution for your needs.",
+
     icon: RectangleGroupIcon,
   },
   {
     title: "Special Offers",
-    description: "Explore limited-time deals and bundles",
+
+    icon: TagIcon,
+  },
+  {
+    title: "Special Offers",
+
+    icon: TagIcon,
+  },
+  {
+    title: "Special Offers",
+
+    icon: TagIcon,
+  },
+  {
+    title: "Special Offers",
     icon: TagIcon,
   },
 ];
@@ -83,36 +93,28 @@ const navListMenuItems = [
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-            {" "}
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
-            })}
-          </div>
-          <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold"
-            >
-              {title}
-            </Typography>
-            <Typography
-              variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
-            >
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </a>
-    )
-  );
+
+  const renderItems = navListMenuItems.map(({ icon, title }, key) => (
+    <Link to="/services" key={key}>
+      <MenuItem className="flex items-center gap-3 rounded-lg ">
+        <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+          {" "}
+          {React.createElement(icon, {
+            strokeWidth: 2,
+            className: "h-6 text-black w-6",
+          })}
+        </div>
+
+        <Typography
+          as="div"
+          color="blue-gray"
+          className="flex items-center text-sm font-bold"
+        >
+          {title}
+        </Typography>
+      </MenuItem>
+    </Link>
+  ));
 
   return (
     <React.Fragment>
@@ -133,7 +135,7 @@ function NavListMenu() {
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden overflow-auto    w-3 transition-transform lg:block ${
+                className={`hidden overflow-auto   w-3 transition-transform lg:block ${
                   isMenuOpen ? "rotate-180" : ""
                 }`}
               />
@@ -146,14 +148,24 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block ">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+        <MenuList className="hidden max-w-full w-full px-3 rounded-xl lg:block ">
+          <h1 className="text-3xl font-bold m-3 text-black">برامج الويب</h1>
+          <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0">
+            {renderItems}
+          </ul>
+          <h1 className="text-3xl font-bold m-3 text-black">برامج الويب</h1>
+          <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden auto">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+        <Collapse open={isMobileMenuOpen}>
+        <h1 className="text-3xl font-bold m-3 text-black">برامج الويب</h1>
+          {renderItems}
+          <h1 className="text-3xl font-bold m-3 text-black">برامج الويب</h1>
+          {renderItems}
+          </Collapse>
       </div>
     </React.Fragment>
   );
@@ -162,13 +174,13 @@ function NavList() {
   return (
     <List className="mt-4 mb-6  lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 p-5">
       <Typography
-        as="a"
-        href="#"
+        as={Link}
+        to="/"
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 text-xl ">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 !hover:bg-sky-700  text-xl ">
           الرئيسية
         </ListItem>
       </Typography>
@@ -213,6 +225,12 @@ function NavList() {
 const Header = () => {
   const [openNav, setOpenNav] = useState(false);
 
+  const [changeLanguage, setChangeLanguage] = useState(false);
+
+  const handleChangeLanguage = () => {
+    setChangeLanguage(!changeLanguage);
+  };
+
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -236,12 +254,25 @@ const Header = () => {
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex items-center  ">
-          <img src={sauidiFlag} alt="sauidi flag"className="w-[3em]"/>
-          <img src={americanFlag} alt=" american flag" className="w-[3em]"/>
+          <span onClick={handleChangeLanguage}>
+            {changeLanguage ? "English" : "عربى"}
+          </span>
+          <TbWorld
+            onClick={handleChangeLanguage}
+            className="text-4xl text-[#121F4E]"
+          />
           <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
           </button>
         </div>
+        <div
+          className="flex items-center justify-start ms-auto gap-2 lg:hidden "
+          onClick={handleChangeLanguage}
+        >
+          <span>{changeLanguage ? "English" : "عربى"}</span>
+          <TbWorld className="text-4xl  text-[#121F4E]" />
+        </div>
+
         <IconButton
           variant="text"
           color="blue-gray"
@@ -255,11 +286,10 @@ const Header = () => {
           )}
         </IconButton>
       </div>
+
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-        <img src={sauidiFlag} alt="sauidi flag"className="w-[3em]"/>
-          <img src={americanFlag} alt=" american flag" className="w-[3em]"/>
           <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
           </button>
