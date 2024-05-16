@@ -83,6 +83,7 @@ const Home = () => {
       </div>
       {/* features */}
       <Features
+        animation={['fade-up','fade-left','fade-right']}
         headTitle={"اهم ما يميزنا ؟ "}
         headDesc={
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
@@ -203,7 +204,9 @@ const Home = () => {
       </div>
 
       {/* Start  Technologies section */}
-      <TechContainer />
+      <TechContainer
+       animation={['fade-up','fade-left','fade-right']}
+      />
       {/* End  Technologies section */}
 
       <div className="swiper-body container">
