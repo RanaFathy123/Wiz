@@ -3,7 +3,7 @@ import './css/Blog.css';
 import BlogImg from '../../../assets/image/blog.png'
 export default function Blog() {
     return (
-        <div data-aos='fade-up' className="blog">
+        <div data-aos-delay="500" data-aos='fade-up' className="blog">
             <img src={BlogImg} alt="" />
             <a href="#">هندسة البرمجيات</a>
             <h1>بناء حزمة API الخاصة بك</h1>
