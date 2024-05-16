@@ -31,85 +31,77 @@ import { Link } from "react-router-dom";
 import Logo from "../../../../../assets/image/Logo.png";
 import { TbWorld } from "react-icons/tb";
 // import { TbWorld } from "react-icons/tb";
+import megamenueimg1 from "../../../../../assets/image/mega-menu-img-1.png";
+import megamenuimg2 from "../../../../../assets/image/mega-menu-img2.png";
 
 const navListMenuItems = [
   {
-    title: "Products",
-    icon: SquaresPlusIcon,
+    title: "تطوير المواقع",
+    img: megamenueimg1,
   },
   {
-    title: "About Us",
-    icon: UserGroupIcon,
+    title: "تصميم وتطوير التطبيقات",
+    img: megamenuimg2,
+  },
+];
+const navListMenuItems2 = [
+  {
+    title: "الاستضافة السحابية",
+    img: megamenueimg1,
   },
   {
-    title: "Blog",
-    icon: Bars4Icon,
+    title: "استضافة الويب",
+    img: megamenuimg2,
   },
   {
-    title: "Services",
-
-    icon: SunIcon,
+    title: "الخادم الخاص",
+    img: megamenueimg1,
   },
   {
-    title: "Support",
-
-    icon: GlobeAmericasIcon,
-  },
-  {
-    title: "Contact",
-
-    icon: PhoneIcon,
-  },
-  {
-    title: "News",
-
-    icon: NewspaperIcon,
-  },
-  {
-    title: "Products",
-
-    icon: RectangleGroupIcon,
-  },
-  {
-    title: "Special Offers",
-
-    icon: TagIcon,
-  },
-  {
-    title: "Special Offers",
-
-    icon: TagIcon,
-  },
-  {
-    title: "Special Offers",
-
-    icon: TagIcon,
-  },
-  {
-    title: "Special Offers",
-    icon: TagIcon,
+    title: "ادارة السيرفرات",
+    img: megamenuimg2,
   },
 ];
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const renderItems = navListMenuItems.map(({ icon, title }, key) => (
+  const renderItems = navListMenuItems.map(({ img, title }, key) => (
     <Link to="/services" key={key}>
       <MenuItem className="flex items-center gap-3 rounded-lg ">
         <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-          {" "}
-          {React.createElement(icon, {
-            strokeWidth: 2,
-            className: "h-6 text-black w-6",
-          })}
+          {/*    {React.createElement(icon, {
+      strokeWidth: 2,
+      className: "h-6 text-black w-6",
+    })} */}
+          <img src={img} className="bg-white" alt="megamenuimg" />
         </div>
 
         <Typography
           as="div"
           color="blue-gray"
-          className="flex items-center text-sm font-bold"
+          className="flex items-center  font-bold text-xl"
+        >
+          {title}
+        </Typography>
+      </MenuItem>
+    </Link>
+  ));
+  const renderItems2 = navListMenuItems2.map(({ img, title }, key) => (
+    <Link to="/services" key={key}>
+      <MenuItem className="flex items-center gap-3 rounded-lg ">
+        <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+          {/*    {React.createElement(icon, {
+            strokeWidth: 2,
+            className: "h-6 text-black w-6",
+          })} */}
+          <img src={img} className="bg-white" alt="megamenuimg" />
+        </div>
+
+        <Typography
+          as="div"
+          color="blue-gray"
+          className="flex items-center  font-bold text-xl"
         >
           {title}
         </Typography>
@@ -150,23 +142,31 @@ function NavListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden  max-w-full w-full px-3 rounded-xl lg:block ">
-          <div className="text-3xl font-bold m-3 text-black outline-none outline-0  container mx-auto !px-0 !py-3">برامج الويب</div>
-          <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0 container  mx-auto !px-0 !py-0">
+          <div className="text-3xl font-extrabold m-3 text-black outline-none outline-0  container mx-auto !px-0 !py-3">
+            التصميم والتطوير
+          </div>
+          <ul className="grid grid-cols-4 w-full gap-y-2 outline-none outline-0 container  mx-auto !px-0 !py-0">
             {renderItems}
           </ul>
-          <div className="text-3xl font-bold m-3 text-black outline-none outline-0 container mx-auto !px-0 !py-3">برامج الويب</div>
-          <ul className="grid grid-cols-6 w-full gap-y-2 outline-none outline-0 container mx-auto !px-0 !py-0">
-            {renderItems}
+          <div className="text-3xl font-bold m-4 text-black outline-none outline-0 container mx-auto !px-0 !py-3">
+            خدمات الإستضافة
+          </div>
+          <ul className="grid grid-cols-4 w-full gap-y-2 outline-none outline-0 container mx-auto !px-0 !py-0">
+            {renderItems2}
           </ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden auto">
         <Collapse open={isMobileMenuOpen}>
-        <div className="text-3xl font-bold m-3 text-black outline-none outline-0 ">برامج الويب</div>
+          <div className="text-xl font-bold m-3 text-black outline-none outline-0 ">
+            التصميم والتطوير
+          </div>
           {renderItems}
-          <div className="text-3xl font-bold m-3 text-black outline-none outline-0 ">برامج الويب</div>
-          {renderItems}
-          </Collapse>
+          <div className="text-xl font-bold m-4 text-black outline-none outline-0 ">
+            خدمات الإستضافة
+          </div>
+          {renderItems2}
+        </Collapse>
       </div>
     </React.Fragment>
   );
