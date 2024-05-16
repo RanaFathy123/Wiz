@@ -7,7 +7,7 @@ import Tech_1 from "../../../../assets/GIf/Tech_1.gif"
 const TechContainer = ({ animation }) => {
   return (
     // id="techParagraph"
-    <div className="container">
+    <div className="container overflow-y-hidden">
       <div className="head">
         <h1 data-aos={animation[2]}>الادوات و التقنيات</h1>
         <p data-aos={animation[1]}>

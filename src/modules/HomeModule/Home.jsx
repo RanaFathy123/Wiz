@@ -37,6 +37,7 @@ import salla from '../../assets/image/salla.png'
 import secc from '../../assets/image/seccess.png'
 import wiz from '../../assets/GIf/hero_1.gif'
 import { useEffect } from "react";
+import LowCode from "./components/LowCode/LowCode";
 const Home = () => {
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const Home = () => {
 
 
   return (
-    <div >
+    <div className="overflow-x-hidden">
       <HeroSection
         animationText={'fade-left'}
         animationDesc={'fade-up'}
@@ -83,7 +84,7 @@ const Home = () => {
       </div>
       {/* features */}
       <Features
-        animation={['fade-up','fade-left','fade-right']}
+        animation={['fade-up', 'fade-left', 'fade-right']}
         headTitle={"اهم ما يميزنا ؟ "}
         headDesc={
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
@@ -205,7 +206,7 @@ const Home = () => {
 
       {/* Start  Technologies section */}
       <TechContainer
-       animation={['fade-up','fade-left','fade-right']}
+        animation={['fade-up', 'fade-left', 'fade-right']}
       />
       {/* End  Technologies section */}
 
@@ -278,7 +279,11 @@ const Home = () => {
       <CompaniesCard />
       {/* End Companies logos section */}
 
+      {/* Low Code */}
+      <div className="lowCode bg-[#F9F9F9] my-20">
 
+      <LowCode />
+      </div>
 
       <Bannar />
 
