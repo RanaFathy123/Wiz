@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Cairo';
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 /* container */
 .container {

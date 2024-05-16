@@ -1,7 +1,16 @@
 import './css/servicesCard.css'
-export default function ServicesCard({image,title,desc}) {
+// import aos animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+export default function ServicesCard({image,title,desc,animation}) {
+  
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
-    <div className="serv">
+    <div data-aos={animation} data-aos-delay="500"  className="serv">
       <div className="top">
         <img src={image} alt={image}/>
       </div>

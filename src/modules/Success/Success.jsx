@@ -2,9 +2,9 @@ import React from 'react'
 import insta from '../../assets/image/insta.png'
 import tektok from '../../assets/image/tektok.png'
 import './css/success.css'
-export default function Success({CampName,CampDesc,CampImg,type,country,countryImg,platform,platformImg,social}) {
+export default function Success({CampName,CampDesc,CampImg,type,country,countryImg,platform,platformImg,social,animation}) {
     return (
-        <div className="">
+        <div className="" data-aos={animation} data-aos-delay="700">
             <div className='success'>
                 <img src={CampImg} alt="" />
                 <div className="content">

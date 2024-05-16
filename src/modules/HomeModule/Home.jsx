@@ -15,8 +15,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+// import aos animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Navigation, Pagination } from "swiper/modules";
 
 
 // import required modules
@@ -34,10 +36,19 @@ import saudi from '../../assets/image/twemoji_flag-saudi-arabia.png'
 import salla from '../../assets/image/salla.png'
 import secc from '../../assets/image/seccess.png'
 import wiz from '../../assets/GIf/hero_1.gif'
+import { useEffect } from "react";
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
   return (
     <div >
       <HeroSection
+        animationText={'fade-left'}
+        animationDesc={'fade-up'}
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
         btnText={"اشتري الان"}
         image={wiz}
@@ -57,7 +68,7 @@ const Home = () => {
       >
         <div className="flex flex-column items-center justify-center gap-5">
           <div>
-            <h1 className="text-2xl font-bold ">
+            <h1 data-aos="fade-right" className="text-2xl font-bold ">
               منظومة متكاملة تضمن نمو مشروعك بكل احترافية
             </h1>
             <h4 className="text-[#EEC86B] text-lg font-bold mt-4">
@@ -83,11 +94,12 @@ const Home = () => {
       <div className="bg">
         <div className="services container">
           <div className="head">
-            <h1>جميع حدماتك في مكان واحد </h1>
-            <p>حول افكارك الي تقينات متطورة</p>
+            <h1 data-aos="fade-left">جميع حدماتك في مكان واحد </h1>
+            <p data-aos="fade-right">حول افكارك الي تقينات متطورة</p>
           </div>
           <div className="servs">
             <ServicesCard
+              animation={'fade-up'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -95,6 +107,7 @@ const Home = () => {
               }
             />
             <ServicesCard
+              animation={'fade-down-left'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -102,6 +115,7 @@ const Home = () => {
               }
             />
             <ServicesCard
+              animation={'fade-up'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -109,6 +123,7 @@ const Home = () => {
               }
             />
             <ServicesCard
+              animation={'fade-down'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -116,6 +131,7 @@ const Home = () => {
               }
             />
             <ServicesCard
+              animation={'fade-right'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -123,6 +139,7 @@ const Home = () => {
               }
             />
             <ServicesCard
+              animation={'fade-left'}
               image={serviceImg}
               title={"إدارة الحملات الإعلانية"}
               desc={
@@ -135,8 +152,8 @@ const Home = () => {
           </Link>
         </div>
       </div>
-            {/* success */}
-            <div className="swiper-body container ">
+      {/* success */}
+      <div className="swiper-body container ">
         <div className="head">
           <h1>قصص النجاح</h1>
         </div>
@@ -156,6 +173,7 @@ const Home = () => {
         >
           <SwiperSlide>
             <Success
+              animation={'fade-up'}
               CampName={'Company Name'}
               CampDesc={'Diamond Motors has received the highest ratings and various awards in the sales and service categories available.'}
               CampImg={secc}
@@ -169,6 +187,7 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Success
+              animation={'fade-up'}
               CampName={'ميتسوبيشي'}
               CampDesc={'حققت شركة دايموند موتورز أعلى التصنيفات والجوائز المختلفة في مجالات المبيعات والخدمات والتسويق .'}
               CampImg={secc}
@@ -182,7 +201,7 @@ const Home = () => {
         </Swiper>
 
       </div>
-      
+
       {/* Start  Technologies section */}
       <TechContainer />
       {/* End  Technologies section */}
