@@ -6,6 +6,7 @@ import Services from "./modules/ServiceModule/components/Services";
 import MasterLayout from "./modules/SharedModule/components/MasterLayout/components/MasterLayout";
 import "./App.css";
 import Blogs from "./modules/Blogs/Blogs";
+import About from "./modules/about-us/About";
 
 const App = () => {
   const routes = createBrowserRouter([
@@ -17,6 +18,7 @@ const App = () => {
         { index: true, element: <Home /> },
         { path: "services", element: <Services /> },
         { path: "blogs", element: <Blogs /> },
+        { path: "about", element: <About /> }
       ],
     },
   ]);

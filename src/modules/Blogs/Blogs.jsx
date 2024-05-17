@@ -1,10 +1,10 @@
-import React from 'react'
+ 
 import './css/blogs.css'
 import Blog from '../SharedModule/BlogCard/Blog'
 import HeroSection from '../SharedModule/components/HeroSection/components/HeroSection'
 import heroImg from "../../assets/image/hero.png";
 import { ScrollRestoration } from 'react-router-dom';
-// import ImgHero from '../../assets/GIf/HomePage.gif'
+import ImgHero from '../../assets/GIf/HomePage.gif'
 export default function Blogs() {
     return (
         <>
