@@ -43,8 +43,6 @@ const Home = () => {
   useEffect(() => {
     AOS.init();
   }, [])
-
-
   return (
     <div className="overflow-x-hidden">
       <HeroSection

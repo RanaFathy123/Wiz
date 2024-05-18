@@ -128,15 +128,13 @@ function NavListMenu() {
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden overflow-auto   w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`hidden overflow-auto   w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </ListItem>
           </Typography>
@@ -187,14 +185,16 @@ function NavList() {
       </Typography>
       <Typography
         as="a"
-        href="/about"
+        href=""
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 text-xl">
-          من نحن
-        </ListItem>
+        <Link to={'/about'}>
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-xl">
+            من نحن
+          </ListItem>
+        </Link>
       </Typography>
       <NavListMenu />
       <Typography

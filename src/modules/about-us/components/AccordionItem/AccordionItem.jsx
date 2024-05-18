@@ -2,7 +2,7 @@ import  { useState } from 'react';
 import './AccordionItem.css'; // Assuming you have some CSS for styling
 
 // eslint-disable-next-line react/prop-types
-export const AccordionItem = ({ title, description }) => {
+export const AccordionItem = ({ title, description ,animation}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -10,7 +10,7 @@ export const AccordionItem = ({ title, description }) => {
   };
 
   return (
-    <div className={`accordion-item ${isOpen ? 'open' : ''}`}>
+    <div data-aos='fade-up' className={`accordion-item ${isOpen ? 'open' : ''}`}>
       <div className="accordion-item-header" onClick={toggleAccordion}>
         <span className="accordion-item-header-title">{title}</span>
         <svg
