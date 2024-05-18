@@ -210,14 +210,16 @@ function NavList() {
       </Typography>
       <Typography
         as="a"
-        href="#"
+        href=""
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
+        <Link to={'blogs'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-xl">
           مدونات
         </ListItem>
+        </Link>
       </Typography>
     </List>
   );
