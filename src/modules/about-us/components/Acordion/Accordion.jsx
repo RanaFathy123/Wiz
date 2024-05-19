@@ -1,6 +1,6 @@
 import { AccordionItem } from "../AccordionItem/AccordionItem";
 import '../AccordionItem/AccordionItem.css'
-const Accordion = ({animation}) => {
+const Accordion = ({ animation }) => {
   const items = [
     {
       title: 'ما هو برنامج إدارة حسابات التواصل الاجتماعي؟',
@@ -33,11 +33,14 @@ const Accordion = ({animation}) => {
   ];
 
   return (
-    <div className="container">
+    <div className="container overflow-y-hidden">
       <div className="accordion">
 
         {items.map((item, index) => (
-          <AccordionItem  key={index} title={item.title} description={item.description} />
+          <div data-aos='fade-up'>
+
+            <AccordionItem key={index} title={item.title} description={item.description} />
+          </div>
         ))}
       </div>
     </div>
