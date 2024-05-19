@@ -26,11 +26,11 @@
     padding: 15px 25px;
     border-radius: 5px;
     background: #F9F9F9;
-    transition: 0.5s;
+    transition: 0.5s !important;
 }
 
 .blog:hover {
-    transition: 0.3s;
+    transition: 0.3s !important;
     scale: 1.02;
 }
 
