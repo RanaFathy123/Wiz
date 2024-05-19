@@ -34,8 +34,11 @@ const Accordion = ({ animation }) => {
 
   return (
     <div className="container overflow-y-hidden">
+      <div className="head">
+        <h1>الاسئله الشائعه</h1>
+      </div>
+      
       <div className="accordion">
-
         {items.map((item, index) => (
           <div data-aos='fade-up'>
 
