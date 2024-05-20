@@ -4,15 +4,22 @@ import Accordion from "./components/Acordion/Accordion"
 import Bannar from "../SharedModule/Bannar/Bannar"
 
 import Features from "../SharedModule/Features/Features"
-
-
+// aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const About = () => {
+ 
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
   return (
     <>
       <HeroSection
-        animationText={['fade-up']}
-        animationDesc={['fade-left']}
+        animationText={'fade-up'}
+        animationDesc={'fade-left'}
         title={'تعرف علي اهم خصائصنا'}
         descrption={'استراتيجيتنا تعتمد على التطوير المستمر لتحقيق الأهداف دون تعقيدات أو إضاعة وقت في التخطيط الزائد'}
         image={wiz}
@@ -26,8 +33,9 @@ const About = () => {
           "نُوفر فريق جودة، إدارة، ومتابعة لكل مشروع مع العميل، مع إضافة نظام متكامل للمشروع لتسليمه بعد الانتهاء"
         }
       />
+      
       <Accordion 
-      animation={['fade-up']}
+      animation={['fade-left']}
       />
       <Bannar />
 

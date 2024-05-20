@@ -2,15 +2,24 @@
 import './css/blogs.css'
 import Blog from '../SharedModule/BlogCard/Blog'
 import HeroSection from '../SharedModule/components/HeroSection/components/HeroSection'
-import heroImg from "../../assets/image/hero.png";
-import { ScrollRestoration } from 'react-router-dom';
 import wiz from '../../assets/GIf/hero_1.gif'
+
+// aos
+import AOS from 'aos';
+// import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 export default function Blogs() {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <>
             <HeroSection
-                animationText={['fade-up']}
-                animationDesc={['fade-left']}
+                animationText={'fade-up'}
+                animationDesc={'fade-left'}
                 image={wiz}
                 title={' إدارة الحملات الإعلانية'}
                 descrption={'حقق نمو مبيعات متجرك من خلال إدارة شاملة لإعلاناتك  انضم إلى قائمة عملائنا الذين حققوا عوائد تفوق 9 أضعاف المصروفات.'}

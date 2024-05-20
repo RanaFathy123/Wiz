@@ -10,7 +10,7 @@ export const AccordionItem = ({ title, description ,animation}) => {
   };
 
   return (
-    <div data-aos='fade-up' className={`accordion-item ${isOpen ? 'open' : ''}`}>
+    <div  className={`accordion-item ${isOpen ? 'open' : ''}`}>
       <div className="accordion-item-header" onClick={toggleAccordion}>
         <span className="accordion-item-header-title">{title}</span>
         <svg
