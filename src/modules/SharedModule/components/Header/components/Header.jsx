@@ -197,7 +197,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em]">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em] mx-2">
           العملاء
         </ListItem>
       </Typography>
@@ -209,7 +209,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"blogs"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em]">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em] mx-2">
             مدونات
           </ListItem>
         </Link>
