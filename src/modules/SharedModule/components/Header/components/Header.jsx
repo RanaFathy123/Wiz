@@ -37,71 +37,62 @@ import megamenuimg2 from "../../../../../assets/image/mega-menu-img2.png";
 const navListMenuItems = [
   {
     title: "تطوير المواقع",
-    img: megamenueimg1,
+    classTitle: "fa-solid fa-mobile text-red-200 ",
   },
   {
     title: "تصميم وتطوير التطبيقات",
-    img: megamenuimg2,
+    classTitle: "fa-solid fa-computer text-green-200",
   },
 ];
 const navListMenuItems2 = [
   {
     title: "الاستضافة السحابية",
-    img: megamenueimg1,
+    classTitle: "fa-solid fa-mobile",
   },
   {
     title: "استضافة الويب",
-    img: megamenuimg2,
+    classTitle: "fa-solid fa-mobile",
   },
   {
     title: "الخادم الخاص",
-    img: megamenueimg1,
+    classTitle: "fa-solid fa-mobile",
   },
   {
     title: "ادارة السيرفرات",
-    img: megamenuimg2,
+    classTitle: "fa-solid fa-mobile",
   },
 ];
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const renderItems = navListMenuItems.map(({ img, title }, key) => (
+  const renderItems = navListMenuItems.map(({ classTitle, title }, key) => (
     <Link to="/services" key={key}>
       <MenuItem className="flex items-center gap-3 rounded-lg ">
         <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-          {/*    {React.createElement(icon, {
-      strokeWidth: 2,
-      className: "h-6 text-black w-6",
-    })} */}
-          <img src={img} className="bg-white" alt="megamenuimg" />
+          <i className={classTitle}></i>
         </div>
-
         <Typography
           as="div"
           color="blue-gray"
-          className="flex items-center  font-bold text-xl"
+          className="flex items-center  font-bold text-[1.1em]"
         >
           {title}
         </Typography>
       </MenuItem>
     </Link>
   ));
-  const renderItems2 = navListMenuItems2.map(({ img, title }, key) => (
+  const renderItems2 = navListMenuItems2.map(({ classTitle, title }, key) => (
     <Link to="/services" key={key}>
       <MenuItem className="flex items-center gap-3 rounded-lg ">
         <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-          {/*    {React.createElement(icon, {
-            strokeWidth: 2,
-            className: "h-6 text-black w-6",
-          })} */}
-          <img src={img} className="bg-white" alt="megamenuimg" />
+          <i className={classTitle}></i>
         </div>
 
         <Typography
           as="div"
           color="blue-gray"
-          className="flex items-center  font-bold text-xl"
+          className="flex items-center  font-bold text-[1.1em]"
         >
           {title}
         </Typography>
@@ -121,32 +112,34 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 text-xl"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 text-[1.1em]"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
               خدماتنا
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden overflow-auto   w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`hidden overflow-auto w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
               />
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden  max-w-full w-full px-3 rounded-xl lg:block ">
-          <div className="text-3xl font-extrabold m-3 text-black outline-none outline-0  container mx-auto !px-0 !py-3">
+        <MenuList className="hidden  max-w-full w-full px-3 rounded-lg lg:block ">
+          <div className="text-[1.1em] font-extrabold m-3 text-black outline-none outline-0  container mx-auto !px-0 !py-3">
             التصميم والتطوير
           </div>
           <ul className="grid grid-cols-4 w-full gap-y-2 outline-none outline-0 container  mx-auto !px-0 !py-0">
             {renderItems}
           </ul>
-          <div className="text-3xl font-bold m-4 text-black outline-none outline-0 container mx-auto !px-0 !py-3">
+          <div className="text-[1.1em] font-extrabold m-4 text-black outline-none outline-0 container mx-auto !px-0 !py-3">
             خدمات الإستضافة
           </div>
           <ul className="grid grid-cols-4 w-full gap-y-2 outline-none outline-0 container mx-auto !px-0 !py-0">
@@ -156,11 +149,11 @@ function NavListMenu() {
       </Menu>
       <div className="block lg:hidden auto">
         <Collapse open={isMobileMenuOpen}>
-          <div className="text-xl font-bold m-3 text-black outline-none outline-0 ">
+          <div className="text-[1.1em] font-bold m-3 text-black outline-none outline-0 ">
             التصميم والتطوير
           </div>
           {renderItems}
-          <div className="text-xl font-bold m-4 text-black outline-none outline-0 ">
+          <div className="text-[1.1em] font-bold m-4 text-black outline-none outline-0 ">
             خدمات الإستضافة
           </div>
           {renderItems2}
@@ -179,7 +172,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 !hover:bg-sky-700  text-xl ">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold text-blue-900 !hover:bg-sky-700  text-[1.1em]">
           الرئيسية
         </ListItem>
       </Typography>
@@ -190,8 +183,8 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'/about'}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-xl">
+        <Link to={"/about"}>
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-[1.1em]">
             من نحن
           </ListItem>
         </Link>
@@ -204,7 +197,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-xl">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em]">
           العملاء
         </ListItem>
       </Typography>
@@ -215,10 +208,10 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'blogs'}>
-        <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-xl">
-          مدونات
-        </ListItem>
+        <Link to={"blogs"}>
+          <ListItem className="flex items-center gap-2 py-2 pr-4 p-2 text-[1.1em]">
+            مدونات
+          </ListItem>
         </Link>
       </Typography>
     </List>
@@ -250,30 +243,32 @@ const Header = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="w-[3.5em]" />
         </Typography>
         {/* ------------- */}
         <div className="over-flow-auto hidden lg:block ">
           <NavList />
         </div>
-        <div className="hidden gap-2 lg:flex items-center  ">
+        <div className="hidden gap-2 lg:flex items-center cursor-pointer ">
           <span onClick={handleChangeLanguage}>
             {changeLanguage ? "English" : "عربى"}
           </span>
           <TbWorld
             onClick={handleChangeLanguage}
-            className="text-3xl ml-3 text-[#121F4E]"
+            className="text-[2em] ml-3 text-[#121F4E]"
           />
-          <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
+          <button className="bg-[#121F4E] text-[0.7em]  text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
           </button>
         </div>
         <div
-          className="flex items-center justify-start ms-auto gap-2 lg:hidden "
+          className="flex items-center justify-start ms-auto gap-2 lg:hidden cursor-pointer"
           onClick={handleChangeLanguage}
         >
-          <span>{changeLanguage ? "English" : "عربى"}</span>
-          <TbWorld className="text-2xl  text-[#121F4E]" />
+          <span className="cursor-pointer">
+            {changeLanguage ? "English" : "عربى"}
+          </span>
+          <TbWorld className="cursor-pointer text-[2em]  text-[#121F4E]" />
         </div>
 
         <IconButton
@@ -293,7 +288,7 @@ const Header = () => {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <button className="bg-[#121F4E]   text-white font-bold py-3 px-[2em] rounded-[100px]">
+          <button className="bg-[#121F4E] text-[0.9em]   text-white font-bold py-3 px-[2em] rounded-[100px]">
             تواصل معانا
           </button>
         </div>
