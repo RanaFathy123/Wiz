@@ -1,18 +1,18 @@
-#serviceIcon{
-    width: 90px;
-    height: 90px;
+#serviceIcon {
+  width: 90px;
+  height: 90px;
 }
 
-
-.card-box{
-    padding-top: 5%;
-width: 1352px;
-height: 200px;
-background: rgba(249, 249, 249, 0.976471);
-border-radius: 20px;
+.card-box {
+  /* padding-top: 5%; */
+  /* width: 1352px; */
+  /* height: 200px; */
+  background: rgba(249, 249, 249, 0.976471);
+  border-radius: 20px;
 }
 
-.service-box{
-    display: flex;
-    flex-direction: row;
-   }
+.service-box {
+  display: flex;
+  flex-direction: row;
+
+}

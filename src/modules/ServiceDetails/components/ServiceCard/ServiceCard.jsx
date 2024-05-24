@@ -1,19 +1,17 @@
-
 import "./css/ServiceCard.css";
-const ServiceCard = ({title , description , img}) => {
+const ServiceCard = ({ title, description, img }) => {
   return (
-    <div className="card-box mt-5">
+    <div className="card-box mt-5 p-[3em]">
       <div className="service-box">
-        <div>
-          <img id="serviceIcon" src={img} alt="learning_photo" />
+        <div className="m-5">
+          <img id="serviceIcon" src={img} alt="learning_photo"  />
         </div>
-
-        <div>
-          <h2 className="font-cairo font-bold text-4xl leading-12 mb-2">
-        {title}
+        <div className="flex flex-col gap-5 ">
+          <h2 className="font-cairo font-bold md:text-[40px] text-[18px] leading-12 mb-2">
+            {title}
           </h2>
           <p className="font-cairo font-normal text-base leading-relaxed">
-        {description}
+            {description}
           </p>
         </div>
       </div>

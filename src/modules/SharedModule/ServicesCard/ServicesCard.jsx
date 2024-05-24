@@ -3,6 +3,7 @@ import './css/servicesCard.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 export default function ServicesCard({image,title,desc,animation}) {
   
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function ServicesCard({image,title,desc,animation}) {
       <div className="bottom">
         <h1>{title}</h1>
         <p>{desc}</p>
-        <a href="/service/details">المزيد</a>
+        <Link to="/service/details">المزيد</Link>
       </div>
     </div>
   )
