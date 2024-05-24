@@ -17,7 +17,7 @@ export default function ServicesCard({image,title,desc,animation}) {
       <div className="bottom">
         <h1>{title}</h1>
         <p>{desc}</p>
-        <a href="#">المزيد</a>
+        <a href="/service/details">المزيد</a>
       </div>
     </div>
   )

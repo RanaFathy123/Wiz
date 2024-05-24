@@ -7,6 +7,7 @@ import MasterLayout from "./modules/SharedModule/components/MasterLayout/compone
 import "./App.css";
 import Blogs from "./modules/Blogs/Blogs";
 import About from "./modules/about-us/About";
+import ServiceDetails from "./modules/ServiceDetails/ServiceDetails";
 
 const App = () => {
   const routes = createBrowserRouter([
@@ -18,7 +19,8 @@ const App = () => {
         { index: true, element: <Home /> },
         { path: "services", element: <Services /> },
         { path: "blogs", element: <Blogs /> },
-        { path: "about", element: <About /> }
+        { path: "about", element: <About /> },
+        {path:"service/details",element:<ServiceDetails/>}
       ],
     },
   ]);
