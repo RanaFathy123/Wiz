@@ -8,7 +8,8 @@
 }
 
 :root {
-    --main-color: #0C3C8B;
+    --main-color: #0065d2;
+    /* --main-color: #0C3C8B; */
     --sec-color: #000;
 }
 
@@ -25,7 +26,6 @@ body {
     margin-right:  auto !important;
     overflow-x: hidden !important;
 }
-
 @media(width < 768px) {
     .container {
         padding: 50px 30px !important;
@@ -75,16 +75,13 @@ body {
     div h2{
       font-size: 32px;
       line-height: 40.98px;
-    }
-    
+    }    
 }
-
 /* swiper */
 .swiper-body {
     position: relative;
     height: 100%;
 }
-
 .swiper-body {
     /* background: #eee; */
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -94,7 +91,6 @@ body {
     /* padding: 20px; */
 
 }
-
 .swiper-body .swiper {
     width: 100%;
     height: 100%;

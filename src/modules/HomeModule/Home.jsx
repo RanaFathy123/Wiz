@@ -48,7 +48,7 @@ const Home = () => {
         animationText={'fade-left'}
         animationDesc={'fade-up'}
         title={"حقق نموك مع نظامنا المتكامل للتسويق الالكترونى"}
-        btnText={"اشتري الان"}
+        btnText={"اطلب استشارتك الآن"}
         image={wiz}
         descrption={
           "أكثر من مجرد اعلانات تشمل خدماتنا كل شي لضمان نجاح مشروعك من الصفر"
@@ -279,7 +279,7 @@ const Home = () => {
       {/* Low Code */}
       <div className="lowCode bg-[#F9F9F9] my-20">
 
-      <LowCode />
+        <LowCode />
       </div>
 
       <Bannar />
