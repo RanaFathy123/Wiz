@@ -19,6 +19,10 @@ import Transfer from "../../assets/image/Transfer.png";
 import multipleDevices from "../../assets/image/Multiple Devices.png";
 import cms from "../../assets/image/CMS.png";
 import inProgress from "../../assets/image/In Progress.png";
+import { faGear } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop } from '@fortawesome/free-solid-svg-icons';
+
 
 import ServiceCard from "./components/ServiceCard/ServiceCard";
 const ServiceDetails = () => {
@@ -37,6 +41,7 @@ const ServiceDetails = () => {
           "حقق نمو مبيعات متجرك من خلال إدارة شاملة لإعلاناتك  انضم إلى قائمة عملائنا الذين حققوا عوائد تفوق 9 أضعاف المصروفات."
         }
         btnText={"اطلب استشارتك الان"}
+     
       />
 
       {/* success */}
@@ -94,6 +99,7 @@ const ServiceDetails = () => {
             "  لتحقيق نمو تجاري مستدام، من خلال زيادة المبيعات شهريًا وتحقيق نمو متواصل للأعمال."
           }
           img={Learning}
+          icon={faGear}
         />
         <ServiceCard
           title={"خطة محتوى تبرز مزايا المتجر والمنتجات"}
@@ -101,6 +107,7 @@ const ServiceDetails = () => {
             "  لتحقيق نمو تجاري مستدام، من خلال زيادة المبيعات شهريًا وتحقيق نمو متواصل للأعمال."
           }
           img={TodoList}
+          icon={faBars}
         />
         <ServiceCard
           title={"استخدام منصات إعلانية ملائمة وذات ربحية عالية"}
@@ -108,6 +115,7 @@ const ServiceDetails = () => {
             "  لتحقيق نمو تجاري مستدام، من خلال زيادة المبيعات شهريًا وتحقيق نمو متواصل للأعمال."
           }
           img={multipleDevices}
+          icon={faLaptop}
         />
         <ServiceCard
           title={"صناعة محتوى عالي الجودة"}
@@ -115,6 +123,7 @@ const ServiceDetails = () => {
             "  لتحقيق نمو تجاري مستدام، من خلال زيادة المبيعات شهريًا وتحقيق نمو متواصل للأعمال."
           }
           img={inProgress}
+          icon={faGear}
         />
         <ServiceCard
           title={"رفع معدل التحويلات"}
@@ -122,6 +131,7 @@ const ServiceDetails = () => {
             "الإعلانات أكثر من مجرد (إرفع الشاشة)  يتطلب الأمر استراتيجية متكاملة، تركز على أهدافك وجمهورك، وتحفزهم نحو تحقيق النجاح. يعمل فريق الإعلانات على وضع استراتيجية تعتمد على البيانات والمعلومات، مع تتبع أحدث التطورات في مجال الإعلانات"
           }
           img={cms}
+          icon={faLaptop}
         />
       {/*   <ServiceCard
           title={"استراتيجية الإعلانات"}
