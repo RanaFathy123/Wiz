@@ -202,49 +202,6 @@ const Home = () => {
         </div>
 
       </div>
-      {/* start my work */}
-      <div className="container">
-        <div className="head">
-          <h1>بعض مشاريعنا</h1>
-        </div>
-        <Tabs value="all">
-          <TabsHeader className="mb-8">
-            <div className="grid md:grid-cols-5 gap-y-3 grid-cols-3 w-full">
-
-              {data.map(({ label, value }) => (
-                <Tab key={value} value={value}>
-                  <p className="md:text-[21px] text-[16px]">
-                  {label}
-                  </p>
-                </Tab>
-              ))}
-            </div>
-          </TabsHeader>
-          <TabsBody>
-            {data.map(({ value, desc }) => (
-              <TabPanel key={value} value={value}>
-                <div className="grid md:grid-cols-3 grid-cols-2 gap-5">
-
-                  {desc.map((des) => (
-                    <img src={des} alt="" />
-                  ))}
-                </div>
-              </TabPanel>
-            ))}
-          </TabsBody>
-        </Tabs>
-      </div>
-
-
-      {/* end my work */}
-
-
-
-
-
-
-
-
 
       {/* success */}
       <div className="swiper-body container ">
@@ -295,13 +252,46 @@ const Home = () => {
         </Swiper>
 
       </div>
-
       {/* Start  Technologies section */}
       <TechContainer
         animation={['fade-up', 'fade-left', 'fade-right']}
       />
       {/* End  Technologies section */}
 
+      {/* start my work */}
+      <div className="container">
+        <div className="head">
+          <h1>بعض مشاريعنا</h1>
+        </div>
+        <Tabs value="all">
+          <TabsHeader className="mb-8">
+            <div className="grid md:grid-cols-5 gap-y-3 grid-cols-3 w-full">
+
+              {data.map(({ label, value }) => (
+                <Tab key={value} value={value}>
+                  <p className="md:text-[21px] text-[16px]">
+                    {label}
+                  </p>
+                </Tab>
+              ))}
+            </div>
+          </TabsHeader>
+          <TabsBody>
+            {data.map(({ value, desc }) => (
+              <TabPanel key={value} value={value}>
+                <div className="grid md:grid-cols-3 grid-cols-2 gap-5">
+
+                  {desc.map((des) => (
+                    <img src={des} alt="" />
+                  ))}
+                </div>
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      </div>
+      {/* end my work */}
+      {/* blogs */}
       <div className="swiper-body container">
         <div className="head">
           <h1>أحدث المقالات </h1>
@@ -370,14 +360,16 @@ const Home = () => {
       {/* companies logos section*/}
       <CompaniesCard />
       {/* End Companies logos section */}
-
+      {/* start bannar */}
+      <Bannar />
+      {/* end bannar */}
       {/* Low Code */}
-      <div className="lowCode bg-[#F9F9F9] my-20">
+      <div className="lowCode bg-[#F9F9F9]">
 
         <LowCode />
       </div>
 
-      <Bannar />
+
 
     </div >
   );

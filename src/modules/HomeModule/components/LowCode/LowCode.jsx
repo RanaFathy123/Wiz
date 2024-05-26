@@ -6,7 +6,7 @@ import image4 from "../../../../assets/image/salla.png";
 import './css/lowCode.css'
 export default function LowCode() {
     return (
-        <div className="service-data container  ">
+        <div className="service-data container">
             <div data-aos-offset="300" data-aos="fade-left" className="parentLow">
                 <img src={image4} alt="woo commerce" />
                 <div className="text-header">Salla</div>
