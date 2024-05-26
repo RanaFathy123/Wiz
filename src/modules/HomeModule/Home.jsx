@@ -44,8 +44,65 @@ import wiz from '../../assets/GIf/hero_1.gif'
 import { useEffect } from "react";
 import LowCode from "./components/LowCode/LowCode";
 import Ser from "./components/ser/Ser";
+// taps
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
 const Home = () => {
+  const data = [
+    {
+      label: "الكل",
+      value: "all",
+      desc: [
+        serImg_1,
+        serImg_2,
+        serImg_3,
+        serImg_4,
 
+      ],
+    },
+    {
+      label: "المواقع الالكترونية",
+      value: "web",
+      desc: [
+        serImg_1,
+        serImg_4,
+
+      ],
+    },
+    {
+      label: "الحملات الاعلانية",
+      value: "ads",
+      desc: [
+        serImg_1,
+        serImg_3,
+        serImg_2,
+      ],
+    },
+    {
+      label: "ادارة المشاريع",
+      value: "mngProject",
+      desc: [
+        serImg_4,
+        serImg_2,
+        serImg_1,
+      ],
+    },
+    {
+      label: "أجارة المتاجر",
+      value: "mngStores",
+      desc: [
+        serImg_4,
+        serImg_1,
+      ],
+    },
+  ];
+
+  // ---------------------------
   useEffect(() => {
     AOS.init();
   }, [])
@@ -145,6 +202,50 @@ const Home = () => {
         </div>
 
       </div>
+      {/* start my work */}
+      <div className="container">
+        <div className="head">
+          <h1>بعض مشاريعنا</h1>
+        </div>
+        <Tabs value="all">
+          <TabsHeader className="mb-8">
+            <div className="grid md:grid-cols-5 gap-y-3 grid-cols-3 w-full">
+
+              {data.map(({ label, value }) => (
+                <Tab key={value} value={value}>
+                  <p className="md:text-[21px] text-[12px]">
+                  {label}
+                  </p>
+                </Tab>
+              ))}
+            </div>
+          </TabsHeader>
+          <TabsBody>
+            {data.map(({ value, desc }) => (
+              <TabPanel key={value} value={value}>
+                <div className="grid grid-cols-3 gap-5">
+
+                  {desc.map((des) => (
+                    <img src={des} alt="" />
+                  ))}
+                </div>
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      </div>
+
+
+      {/* end my work */}
+
+
+
+
+
+
+
+
+
       {/* success */}
       <div className="swiper-body container ">
         <div className="head">
@@ -277,9 +378,6 @@ const Home = () => {
       </div>
 
       <Bannar />
-
-      {/* test  */}
-
 
     </div >
   );
