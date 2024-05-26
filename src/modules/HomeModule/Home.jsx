@@ -213,7 +213,7 @@ const Home = () => {
 
               {data.map(({ label, value }) => (
                 <Tab key={value} value={value}>
-                  <p className="md:text-[21px] text-[14px]">
+                  <p className="md:text-[21px] text-[16px]">
                   {label}
                   </p>
                 </Tab>
