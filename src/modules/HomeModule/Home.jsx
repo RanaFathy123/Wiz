@@ -108,6 +108,10 @@ const Home = () => {
   }, [])
   return (
     <div className="overflow-x-hidden">
+  
+     
+     
+     
       <HeroSection
         animationText={'fade-left'}
         animationDesc={'fade-up'}
