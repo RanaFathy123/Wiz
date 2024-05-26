@@ -213,7 +213,7 @@ const Home = () => {
 
               {data.map(({ label, value }) => (
                 <Tab key={value} value={value}>
-                  <p className="md:text-[21px] text-[12px]">
+                  <p className="md:text-[21px] text-[14px]">
                   {label}
                   </p>
                 </Tab>
@@ -223,7 +223,7 @@ const Home = () => {
           <TabsBody>
             {data.map(({ value, desc }) => (
               <TabPanel key={value} value={value}>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-3 grid-cols-2 gap-5">
 
                   {desc.map((des) => (
                     <img src={des} alt="" />
