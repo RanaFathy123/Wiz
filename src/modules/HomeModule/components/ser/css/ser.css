@@ -1,0 +1,43 @@
+.ser {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    width: 100%;
+    /* display: flex; */
+    /* width: 100%; */
+    gap: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* background: #000; */
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 44.98px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.servbtn {
+    /* display: inline; */
+    width: fit-content;
+    margin: auto;
+}
+
+@media(width < 500px) {
+    .card h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .cards {
+        gap: 30px 20px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

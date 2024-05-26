@@ -2,7 +2,13 @@
 // import imgs
 import serviceImg from "../../assets/GIf/2.gif";
 import HeroSection from "./../SharedModule/components/HeroSection/components/HeroSection";
-import vedioImage from "../../assets/image/Group 427320995.png";
+// import vedioImage from "../../assets/image/Group 427320995.png";
+import serImg_1 from "../../assets/image/ser_2.png";
+import serImg_2 from "../../assets/image/ser_1.png";
+import serImg_3 from "../../assets/image/ser_3.png";
+import serImg_4 from "../../assets/image/ser_4.png";
+import vedioImage from "../../assets/videos/wiz.mp4";
+
 import "./css/home.css";
 import CompaniesCard from "./components/CompaniesCard/CompaniesCard";
 
@@ -37,6 +43,7 @@ import secc from '../../assets/image/seccess.png'
 import wiz from '../../assets/GIf/hero_1.gif'
 import { useEffect } from "react";
 import LowCode from "./components/LowCode/LowCode";
+import Ser from "./components/ser/Ser";
 const Home = () => {
 
   useEffect(() => {
@@ -55,27 +62,22 @@ const Home = () => {
         }
       />
       {/* main Section */}
-      <div
-        className="bg-image p-5 shadow-1-strong rounded mb-5 text-white "
-        style={{
-          backgroundImage:
-            'url("https://mdbcdn.b-cdn.net/img/new/slides/003.webp")',
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="flex flex-column items-center justify-center gap-5">
-          <div>
-            <h1 data-aos="fade-right" className="text-2xl font-bold ">
-              منظومة متكاملة تضمن نمو مشروعك بكل احترافية
-            </h1>
-            <h4 className="text-[#EEC86B] text-lg font-bold mt-4">
-              تضمن لمشروعك نجاح 100%
-            </h4>
-            <h5 className="mb-5">
-              سعداء بالشراكة مع ايدن فليم للانتاج الاعلامي
-            </h5>
-            <img src={vedioImage} alt="vedio img" className="mt-3 w-[35em] " />
+      <div className="bg-[#F9F9F9F9]">
+        <div className="container vid">
+          <video src={vedioImage} autoPlay controls autoFocus></video>
+          <div className="info">
+            <h1>منظومة متكاملة تضمن نمو مشروعك بكل احترافية  نجاح  100%</h1>
+            <p>سعداء بالشراكة مع ايدن فليم للانتاج  الاعلامي</p>
+            <div className="counts">
+              <div className="count">
+                <h1>+220</h1>
+                <p>مشاريع تم تنفيذها</p>
+              </div>
+              <div className="count">
+                <h1>+220</h1>
+                <p>عميل قمنا باسعادة</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -89,67 +91,59 @@ const Home = () => {
       />
 
 
-      {/* services */}
-      <div className="bg">
-        <div className="services container">
+      <div className="bg serv">
+        <div className='container ser'>
           <div className="head">
-            <h1 data-aos="fade-left">جميع حدماتك في مكان واحد </h1>
-            <p data-aos="fade-right">حول افكارك الي تقينات متطورة</p>
+            <h1>أكتشف خدماتك</h1>
+            <p>حول افكارك الي تقينات متطورة</p>
           </div>
-          <div className="servs">
-            <ServicesCard
+          <div className="cards">
+            <Ser
               animation={'fade-up'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
+              img={serImg_1}
+              title={'ادارة الحملات الاعلانية'}
             />
-            <ServicesCard
-              animation={'fade-down-left'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
-            />
-            <ServicesCard
+            <Ser
               animation={'fade-up'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
+              img={serImg_2}
+              title={'أدارة المتاجر الالكترونية'}
             />
-            <ServicesCard
-              animation={'fade-down'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
+            <Ser
+              animation={'fade-up'}
+              img={serImg_3}
+              title={'ادارة الحملات الاعلانية'}
             />
-            <ServicesCard
-              animation={'fade-right'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
+            <Ser
+              animation={'fade-up'}
+              img={serImg_4}
+              title={'أدارة المتاجر الالكترونية'}
             />
-            <ServicesCard
-              animation={'fade-left'}
-              image={serviceImg}
-              title={"إدارة الحملات الإعلانية"}
-              desc={
-                "إدارة الحملات الإعلانية على جميع المنصات، بعد دراسة المتجر والمنتجات والمنافسين،وإدارتها لتحقيق الهدف البيعي."
-              }
+            <Ser
+              animation={'fade-up'}
+              img={serImg_3}
+              title={'أدارة المتاجر الالكترونية'}
+            />
+            <Ser
+              animation={'fade-up'}
+              img={serImg_4}
+              title={'ادارة الحملات الاعلانية'}
+            />
+            <Ser
+              animation={'fade-up'}
+              img={serImg_2}
+              title={'ادارة الحملات الاعلانية'}
+            />
+            <Ser
+              animation={'fade-up'}
+              img={serImg_3}
+              title={'ادارة الحملات الاعلانية'}
             />
           </div>
-          <Link to="/services" className="showAll">
-            عرض المزيد
+          <Link to="/services" className="showAll servbtn">
+            جميع الخدمات
           </Link>
         </div>
+
       </div>
       {/* success */}
       <div className="swiper-body container ">
