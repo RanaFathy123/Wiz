@@ -15,11 +15,11 @@ import our_customers from "../../../../assets/image/our_customers.png"
 import "./css/comapniesCard.css";
 
 const CompaniesCard = () => {
-  const [isMinWidth, setIsMinWidth] = useState(window.innerWidth >= 768);
+  const [isMinWidth, setIsMinWidth] = useState(window.innerWidth >= 900);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMinWidth(window.innerWidth >= 768);
+      setIsMinWidth(window.innerWidth >= 900);
     };
 
     window.addEventListener('resize', handleResize);
@@ -31,7 +31,26 @@ const CompaniesCard = () => {
 
 
       {isMinWidth ? (
-        <img src={our_customers} alt="Our Customers" />
+        <div className="bg-[#0065d2]">
+          <div className="container ">
+            <h2 className="comtitle" >عملاء حققوا النمو معنا</h2>
+              <div className="companies">
+              <img src={eden} alt="eden" />
+              <img src={asu} alt="asu" />
+              <img src={elgoof} alt="elgoof" />
+              <img src={elshar2a} alt="elshar2a" />
+              <img src={zayed_award} alt="zayed_award" />
+              <img src={lambreez} alt="lambreez" />
+              <img src={larooz} alt="larooz" />
+              <img src={mitsubishi} alt="mitsubishi" />
+              <img src={silko} alt="silko" />
+              <img src={twagd} alt="twagd" />
+              </div>
+          </div>
+
+
+        </div>
+        // <img src={our_customers} alt="Our Customers" />
       ) : (
         <>
           <div className="slider container "
@@ -110,8 +129,8 @@ const CompaniesCard = () => {
               <div className="slid">
                 <img src={twagd} alt="" />
               </div>
-                 {/* tow  */}
-                 <div className="slid">
+              {/* tow  */}
+              <div className="slid">
                 <img src={eden} alt="" />
               </div>
               <div className="slid">

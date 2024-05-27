@@ -41,7 +41,9 @@ import saudi from '../../assets/image/twemoji_flag-saudi-arabia.png'
 import salla from '../../assets/image/salla.png'
 import secc from '../../assets/image/seccess.png'
 import wiz from '../../assets/GIf/hero_1.gif'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+// counter import
+import { useInView } from 'react-intersection-observer';
 import LowCode from "./components/LowCode/LowCode";
 import Ser from "./components/ser/Ser";
 // taps
@@ -53,6 +55,7 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 const Home = () => {
+  // data for section my works
   const data = [
     {
       label: "الكل",
@@ -101,17 +104,57 @@ const Home = () => {
       ],
     },
   ];
+  // counter section two
+  const counters = [
+    { label: 'مشاريع تم تنفيذها', initialValue: 820 },
+    { label: 'عميل قمنا باسعادة', initialValue: 62 },
+    { label: 'مشاريع تم تنفيذها', initialValue: 1000 },
+    { label: 'عميل قمنا باسعادة', initialValue: 220 }
+  ];
 
-  // ---------------------------
+  const Counter = ({ label, initialValue }) => {
+    const [count, setCount] = useState(0);
+    const { ref, inView } = useInView({
+      triggerOnce: false, // Trigger only once when it comes into view
+      threshold: 0.1 // Adjust this based on your requirement
+    });
+
+    useEffect(() => {
+      if (inView) {
+        let start = 0;
+        const end = initialValue;
+        const duration = 2000; // Duration in milliseconds
+        const incrementTime = (duration / end) * 2; // Increment time in milliseconds
+
+        const incrementCount = () => {
+          if (start < end) {
+            start += 2;
+            setCount(Math.min(start, end));
+          } else {
+            clearInterval(timer);
+          }
+        };
+
+        const timer = setInterval(incrementCount, incrementTime);
+
+        return () => clearInterval(timer); // Cleanup on unmount
+      }
+    }, [inView, initialValue]);
+
+    return (
+      <div className="count" ref={ref}>
+        <h1>+{count}</h1>
+        <p>{label}</p>
+      </div>
+    );
+  };
+
+  // -----------animation libarary----------------
   useEffect(() => {
     AOS.init();
   }, [])
   return (
     <div className="overflow-x-hidden">
-  
-     
-     
-     
       <HeroSection
         animationText={'fade-left'}
         animationDesc={'fade-up'}
@@ -130,14 +173,11 @@ const Home = () => {
             <h1>منظومة متكاملة تضمن نمو مشروعك بكل احترافية  نجاح  100%</h1>
             <p>سعداء بالشراكة مع ايدن فليم للانتاج  الاعلامي</p>
             <div className="counts">
-              <div className="count">
-                <h1>+220</h1>
-                <p>مشاريع تم تنفيذها</p>
-              </div>
-              <div className="count">
-                <h1>+220</h1>
-                <p>عميل قمنا باسعادة</p>
-              </div>
+              {/* <div> */}
+                {counters.map((counter, index) => (
+                  <Counter key={index} label={counter.label} initialValue={counter.initialValue} />
+                ))}
+              {/* </div> */}
             </div>
           </div>
         </div>

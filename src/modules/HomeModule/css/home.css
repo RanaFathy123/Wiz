@@ -45,9 +45,10 @@
 
 .vid .info .counts {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
     gap: 20px;
     align-items: flex-start;
+    /* background: red; */
 }
 
 .vid .info .counts .count {
@@ -55,14 +56,14 @@
 }
 
 .vid .info .counts .count h1 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 800;
     color: #F8A401;
 
 }
 
 .vid .info .counts .count p {
-    font-size: 21px;
+    font-size: 17px;
     font-weight: 800;
     color: #0C3C8B;
 
