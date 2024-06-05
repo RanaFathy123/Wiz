@@ -104,7 +104,7 @@ const About = () => {
      <div className="bg-[#F5F5F5F5]">
 
       <div className="trust container">
-      <h1 className="md:text-[45px] text-[35px] max-w-[600px] text-[#0065d2] font-bold">موثوق بنا من قبل أفضل الشركات</h1> 
+      <h1 className="md:text-[45px] text-[32px] max-w-[600px] text-[#0065d2] font-bold">موثوق بنا من قبل أفضل الشركات</h1> 
       <div className="comp grid md:grid-cols-6  grid-cols-3">
         <img src={lam} alt="" />
         <img src={lam} alt="" />
