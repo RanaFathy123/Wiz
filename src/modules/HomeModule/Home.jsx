@@ -152,7 +152,8 @@ const Home = () => {
   // -----------animation libarary----------------
   useEffect(() => {
     AOS.init({
-      duration: 1000 
+      duration: 1000, 
+      delay:500
     });
   }, [])
   return (
