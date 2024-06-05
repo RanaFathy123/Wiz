@@ -8,8 +8,15 @@ import "./App.css";
 import Blogs from "./modules/Blogs/Blogs";
 import About from "./modules/about-us/About";
 import ServiceDetails from "./modules/ServiceDetails/ServiceDetails";
+import Aos from "aos";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000 
+    });
+  }, [])
   const routes = createBrowserRouter([
     {
       path: "/",

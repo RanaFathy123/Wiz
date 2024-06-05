@@ -151,7 +151,9 @@ const Home = () => {
 
   // -----------animation libarary----------------
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000 
+    });
   }, [])
   return (
     <div className="overflow-x-hidden">

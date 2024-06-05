@@ -13,7 +13,9 @@ import './css/about.css';
 const About = () => {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000
+    });
   }, [])
 
   return (
@@ -103,17 +105,17 @@ const About = () => {
         </div>
       </section>
       {/* end edu */}
-      <div className="bg-[#F5F5F5F5]">
+      <div className="bg-[#F5F5F5F5] overflow-y-hidden">
 
-        <div className="trust container">
-          <h1 className="md:text-[45px] text-[32px] max-w-[600px] text-[#0065d2] font-bold">موثوق بنا من قبل أفضل الشركات</h1>
+        <div className="trust container overflow-y-hidden">
+          <h1 data-aos='fade-up' className="md:text-[45px] text-[32px] max-w-[600px] text-[#0065d2] font-bold">موثوق بنا من قبل أفضل الشركات</h1>
           <div className="comp grid md:grid-cols-6  grid-cols-3">
-            <img src={lam} alt="" />
-            <img src={lam} alt="" />
-            <img src={lam} alt="" />
-            <img src={lam} alt="" />
-            <img src={lam} alt="" />
-            <img src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
+            <img data-aos='fade-up' src={lam} alt="" />
           </div>
         </div>
 
