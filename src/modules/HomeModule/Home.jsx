@@ -130,7 +130,7 @@ const Home = () => {
           if (start < end) {
             start += 2;
             setCount(Math.min(start, end));
-          } else {
+          } else {npm 
             clearInterval(timer);
           }
         };
