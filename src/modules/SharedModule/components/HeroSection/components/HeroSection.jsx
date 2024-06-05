@@ -12,7 +12,7 @@ const HeroSection = ({ title, descrption, image, btnText, animationText, animati
       <div className="text">
         <h1 data-aos={animationText} className={`title ${titleClass}`}>{title}</h1>
         <p data-aos={animationDesc} className="desc">{descrption}</p>
-        <a href="" className="btn-heroSection">
+        <a href="" className="showAll">
           {btnText}
         </a>
       </div>
