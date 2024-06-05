@@ -35,13 +35,13 @@
 }
 
 .bannar a {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     background: #F8A401;
     border: 1px solid #F8A401;
     border-radius: 50px;
-    padding: 15px 30px;
-    transition: 0.3s;
+    padding: 12px 35px;
+    transition: 0.3s !important;
 }
 
 .bannar a:hover {

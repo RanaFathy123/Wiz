@@ -8,7 +8,7 @@ export default function Bannar() {
         <div className="contact">
           <h1 data-aos="fade-left">جاهز تتواصل معنا؟</h1>
           <p data-aos="fade-up">تواصل معانا عبر الواتساب لتوضيح تفاصيل مشروعك و تسليمة الي فريق العمل </p>
-          <a data-aos="fade-down" href="https://wa.me/201029138503">تواصل معانا</a>
+          <a data-aos="fade-down" href="https://wa.me/+966576658530">تواصل معانا</a>
         </div>
         <img data-aos="fade-right" src={BannarImg} alt="" />
       </div>
