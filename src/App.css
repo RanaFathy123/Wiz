@@ -150,13 +150,13 @@ body {
   .showAll{
     margin-top: 30px;
     padding: 10px 30px;
-    background: linear-gradient(180deg, #121F4E 0%, #0D3780 100%);
+    background: linear-gradient(180deg, #0065D2 0%, #0065D2 100%);
     color: #fff;
     border-radius: 50px;
     transition: 0.3s;
-    border: 1px solid #0D3780;
+    border: 1px solid #0065D2;
   }
-  .showAll:hover{
+  .showAll:hover{ 
     background: none;
     scale: 1.1;
     border-radius: 10px;

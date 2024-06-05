@@ -91,7 +91,7 @@
 }
 
 .heroSection .title {
-    color: #000;
+    /* color: #000; */
     font-size: 50px;
     line-height: 80px;
     font-weight: 700;
@@ -105,14 +105,20 @@
 }
 
 .btn-heroSection {
-    background: linear-gradient(180deg, #121F4E 0%, #0D3780 100%);
+    background: linear-gradient(180deg, #0065D2 0%, #0065D2 100%);
     border-radius: 100px;
     color: #fff;
     padding: 7px 40px 10px;
     text-decoration: none;
     line-height: 38px;
+    border: 1px solid #0065D2;
+    transition: 0.3s;
 }
-
+.btn-heroSection:hover{
+    background: none;
+    color: #0065D2;
+    scale: 1.03;
+}
 @media(width < 1128px) {
     .heroSection .title {
         font-size: 38px;
@@ -141,7 +147,7 @@
     }
 
     .heroSection .title {
-        color: #0c3c8b;
+        /* color: #0c3c8b; */
         font-size: 28px;
         line-height: 50px;
         font-weight: 700;
