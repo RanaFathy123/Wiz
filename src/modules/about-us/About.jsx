@@ -2,7 +2,7 @@ import HeroSection from "../SharedModule/components/HeroSection/components/HeroS
 import aboutUs from '../../assets/GIf/aboutUs.gif'
 import Accordion from "./components/Acordion/Accordion"
 import Bannar from "../SharedModule/Bannar/Bannar"
-
+import lam from '../../assets/image/companies_logos/whoLambezz.png'
 import Features from "../SharedModule/Features/Features"
 // aos
 import AOS from 'aos';
@@ -45,7 +45,7 @@ const About = () => {
               <h3>نتائج استثنائية </h3>
               <p>نُؤمن بأن النتائج الاستثنائية تتطل
                 ب مواهب استثنائية، ولذلك نحرص على ضمّ نخبة من
-                 المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
+                المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
 
             </div>
 
@@ -57,7 +57,7 @@ const About = () => {
               <h3>نتائج استثنائية </h3>
               <p>نُؤمن بأن النتائج الاستثنائية تتطل
                 ب مواهب استثنائية، ولذلك نحرص على ضمّ نخبة من
-                 المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
+                المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
 
             </div>
 
@@ -69,7 +69,7 @@ const About = () => {
               <h3>نتائج استثنائية </h3>
               <p>نُؤمن بأن النتائج الاستثنائية تتطل
                 ب مواهب استثنائية، ولذلك نحرص على ضمّ نخبة من
-                 المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
+                المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
 
             </div>
 
@@ -81,7 +81,7 @@ const About = () => {
               <h3>نتائج استثنائية </h3>
               <p>نُؤمن بأن النتائج الاستثنائية تتطل
                 ب مواهب استثنائية، ولذلك نحرص على ضمّ نخبة من
-                 المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
+                المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
 
             </div>
 
@@ -93,30 +93,29 @@ const About = () => {
               <h3>نتائج استثنائية </h3>
               <p>نُؤمن بأن النتائج الاستثنائية تتطل
                 ب مواهب استثنائية، ولذلك نحرص على ضمّ نخبة من
-                 المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
+                المواهب المُتميّزة وخصوصا في مجال التسويق.</p>
 
             </div>
 
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* end edu */}
+     <div className="bg-[#F5F5F5F5]">
 
+      <div className="trust container">
+      <h1 className="md:text-[45px] text-[35px] max-w-[600px] text-[#0065d2] font-bold">موثوق بنا من قبل أفضل الشركات</h1> 
+      <div className="comp grid md:grid-cols-6  grid-cols-3">
+        <img src={lam} alt="" />
+        <img src={lam} alt="" />
+        <img src={lam} alt="" />
+        <img src={lam} alt="" />
+        <img src={lam} alt="" />
+        <img src={lam} alt="" />
+      </div>
+      </div>
 
+     </div>
 
 
 

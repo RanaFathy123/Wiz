@@ -4,7 +4,7 @@ import './css/footer.css'
 const Footer = () => {
   return (
     <footer>
-      <div className="container-fluid">
+      <div className="container">
         <div className='right'>
           <img src={logo} alt="" />
           <p>استراتيجيتنا تعتمد على التطوير المستمر لتحقيق الأهداف دون تعقيدات أو إضاعة وقت في التخطيط الزائد</p>
