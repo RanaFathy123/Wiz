@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 export default function Ser({ img, title, animation }) {
     return (
         <Link to={'/services'}>
-            <div data-aos={animation} className="card">
+            <div data-aos={animation ? animation : 'fade-up'} className="card">
                 <img src={img} alt="salla" />
-                <h3 className='hover:text-[#0065d2]'>{title}</h3>
+                <h3 className='hover:text-[#5e86b0]'>{title}</h3>
             </div>
         </Link>
     )

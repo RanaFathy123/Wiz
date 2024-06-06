@@ -1,7 +1,15 @@
 // import React from 'react'
+import { useEffect } from 'react';
 import BannarImg from '../../../assets/GIf/banner.gif'
 import './css/bannar.css'
+import Aos from 'aos';
 export default function Bannar() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+      delay:500
+    });
+  }, [])
   return (
     <div className="bg-[#0C3C8B]">
       <div className='container bannar'>
