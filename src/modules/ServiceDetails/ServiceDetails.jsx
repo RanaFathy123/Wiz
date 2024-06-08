@@ -22,7 +22,7 @@ export default function ServiceDetails() {
   // -----------animation libarary----------------
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+      duration: 2000,
       offset:200,
     });
   }, [])
