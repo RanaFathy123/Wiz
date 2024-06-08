@@ -23,7 +23,7 @@ export default function ServiceDetails() {
   useEffect(() => {
     Aos.init({
       duration: 1000,
-      delay: 500
+      offset:200,
     });
   }, [])
   return (
