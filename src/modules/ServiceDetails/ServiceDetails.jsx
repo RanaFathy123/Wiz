@@ -3,7 +3,7 @@ import HeroSection from '../SharedModule/components/HeroSection/components/HeroS
 import HeroImg from '../../assets/GIf/ads.gif'
 import './css/servicedetails.css'
 import ServiceFeatures from './components/ServiceFeatures'
-import Aos from 'aos'
+import AOS from 'aos'
 import MyWork from './components/MyWork';
 import imagework from '../../assets/image/ser_2.png'
 import todo from '../../assets/image/Todo List.png'
@@ -21,9 +21,9 @@ export default function ServiceDetails() {
   ]);
   // -----------animation libarary----------------
   useEffect(() => {
-    Aos.init({
-      duration: 5000,
-      offset:200,
+    AOS.init({
+      duration: 1500,
+      offset: 200,
     });
   }, [])
   return (

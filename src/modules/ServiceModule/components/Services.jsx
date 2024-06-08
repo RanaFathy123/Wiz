@@ -21,7 +21,7 @@ import {
 } from "@material-tailwind/react";
 import LowCode from '../../HomeModule/components/LowCode/LowCode';
 import { useEffect } from 'react';
-import Aos from 'aos';
+import AOS from 'aos';
 const Services = () => {
   // data for section my works
   const data = [
@@ -73,9 +73,9 @@ const Services = () => {
     },
   ];
   useEffect(() => {
-    Aos.init({
-      duration: 1000, 
-      delay:500
+    AOS.init({
+      duration: 1500,
+      offset: 200,
     });
   }, [])
   return (
@@ -99,39 +99,51 @@ const Services = () => {
           <div className="grid md:grid-cols-4 grid-cols-2 gap-x-5 gap-y-16">
 
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_1} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_2} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_3} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_4} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_1} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_2} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_3} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_4} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_1} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_2} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_3} />
             <Ser
+              link={'/services/details'}
               title={'ادارة الحملات الاعلانية'}
               img={serImg_4} />
 
@@ -173,7 +185,7 @@ const Services = () => {
       {/* end my work */}
       <Bannar />
       {/* low code */}
-      <LowCode/>
+      <LowCode />
     </>
   )
 }

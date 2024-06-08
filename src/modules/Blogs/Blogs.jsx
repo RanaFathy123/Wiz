@@ -12,8 +12,11 @@ import { useEffect } from "react";
 export default function Blogs() {
 
     useEffect(() => {
-        AOS.init();
-    }, [])
+        AOS.init({
+          duration: 1500,
+          offset:200,
+        });
+      }, [])
 
     return (
         <>
