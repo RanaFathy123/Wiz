@@ -1,8 +1,7 @@
 // import React from 'react'
 import HeroSection from '../../SharedModule/components/HeroSection/components/HeroSection'
 import ImgHero from '../../../assets/image/hero.png'
-import ServicesCard from '../../SharedModule/ServicesCard/ServicesCard'
-import serviceImg from '../../../assets/GIf/2.gif'
+// import ServicesCard from '../../SharedModule/ServicesCard/ServicesCard'
 // import services image
 import serImg_1 from "../../../assets/image/ser_2.png";
 import serImg_2 from "../../../assets/image/ser_1.png";

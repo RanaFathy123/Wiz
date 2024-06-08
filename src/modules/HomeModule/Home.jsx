@@ -1,6 +1,5 @@
 // import React from "react";
 // import imgs
-import serviceImg from "../../assets/GIf/2.gif";
 import HeroSection from "./../SharedModule/components/HeroSection/components/HeroSection";
 // import vedioImage from "../../assets/image/Group 427320995.png";
 import serImg_1 from "../../assets/image/ser_2.png";

@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import star from '../../../../../assets/image/star.png';
 
-const HeroSection = ({ title, descrption, image, btnText, animationText, animationDesc ,titleClass}) => {
+const HeroSection = ({ title, descrption, image, btnText, animationText, animationDesc ,titleClass,imgClass}) => {
   return (
     <div className=" heroSection container mt-10">
       <img src={star} className='stars' />
@@ -16,7 +16,7 @@ const HeroSection = ({ title, descrption, image, btnText, animationText, animati
           {btnText}
         </a>
       </div>
-      <img src={image} alt={image} />
+      <img src={image} className={`${imgClass}`} alt={image} />
     </div>
   )
 }
